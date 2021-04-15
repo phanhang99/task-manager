@@ -1,0 +1,876 @@
+doctype html
+html.loading(lang='en' data-textdirection='ltr')
+  // BEGIN: Head
+  head
+    meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui')
+    meta(name='description' content='Stack admin is super flexible, powerful, clean & modern responsive bootstrap 4 admin template with unlimited possibilities.')
+    meta(name='keywords' content='admin template, stack admin template, dashboard template, flat admin template, responsive admin template, web app')
+    meta(name='author' content='PIXINVENT')
+    title To-Do 
+    link(rel='apple-touch-icon' href='/images/apple-icon-120.png')
+    link(rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i' rel='stylesheet')
+    // BEGIN: Vendor CSS
+    link(rel='stylesheet' type='text/css' href='/css/vendors.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/daterangepicker.css')
+    link(rel='stylesheet' type='text/css' href='/css/select2.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/quill.snow.css')
+    link(rel='stylesheet' type='text/css' href='/css/dragula.min.css')
+    // END: Vendor CSS
+    // BEGIN: Theme CSS
+    link(rel='stylesheet' type='text/css' href='/css/bootstrap.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/bootstrap-extended.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/colors.min.css')
+    link(rel='stylesheet' type='text/css' href='css/components.min.css')
+    // END: Theme CSS
+    // BEGIN: Page CSS
+    link(rel='stylesheet' type='text/css' href='/css/vertical-menu-modern.css')
+    link(rel='stylesheet' type='text/css' href='/css/palette-gradient.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/app-todo.min.css')
+    // END: Page CSS
+    // BEGIN: Custom CSS
+    link(rel='stylesheet' type='text/css' href='/css/style.css')
+    // END: Custom CSS
+    // END: Head
+    // BEGIN: Body
+    body.vertical-layout.vertical-menu-modern.content-left-sidebar.todo-application.menu-collapsed.fixed-navbar(data-open='click' data-menu='vertical-menu-modern' data-col='content-left-sidebar')
+      // BEGIN: Header
+      nav.header-navbar.navbar-expand-lg.navbar.navbar-with-menu.fixed-top.navbar-semi-dark
+        .navbar-wrapper
+          .navbar-header
+            ul.nav.navbar-nav.flex-row
+              li.nav-item.mobile-menu.d-lg-none.mr-auto
+                a.nav-link.nav-menu-main.menu-toggle.hidden-xs(href='#')
+                  i.feather.icon-menu.font-large-1
+              li.nav-item.mr-auto
+                a.navbar-brand(href='/index.html')
+                  img.brand-logo(alt='stack admin logo' src='/images/stack-logo-light.png')
+                  h2.brand-text JS
+              li.nav-item.d-none.d-lg-block.nav-toggle
+                a.nav-link.modern-nav-toggle.pr-0(data-toggle='collapse')
+                  i.toggle-icon.feather.icon-toggle-right.font-medium-3.white(data-ticon='feather.icon-toggle-right')
+              li.nav-item.d-lg-none
+                a.nav-link.open-navbar-container(data-toggle='collapse' data-target='#navbar-mobile')
+                  i.fa.fa-ellipsis-v
+          .navbar-container.content
+            #navbar-mobile.collapse.navbar-collapse
+              ul.nav.navbar-nav.mr-auto.float-left
+              ul.nav.navbar-nav.float-right
+                //
+                  <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-gb"></i><span class="selected-language"></span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a><a class="dropdown-item" href="#" data-language="fr"><i class="flag-icon flag-icon-fr"></i> French</a><a class="dropdown-item" href="#" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a><a class="dropdown-item" href="#" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a></div>
+                  </li>
+                li.dropdown.dropdown-notification.nav-item
+                  a.nav-link.nav-link-label(href='#' data-toggle='dropdown')
+                    i.ficon.feather.icon-bell
+                    span.badge.badge-pill.badge-danger.badge-up 5
+                  ul.dropdown-menu.dropdown-menu-media.dropdown-menu-right
+                    li.dropdown-menu-header
+                      h6.dropdown-header.m-0
+                        span.grey.darken-2 Notifications
+                        span.notification-tag.badge.badge-danger.float-right.m-0 5 New
+                    li.scrollable-container.media-list
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-plus-square.icon-bg-circle.bg-cyan
+                          .media-body
+                            h6.media-heading You have new order!
+                            p.notification-text.font-small-3.text-muted Lorem ipsum dolor sit amet, consectetuer elit.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') 30 minutes ago
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-download-cloud.icon-bg-circle.bg-red.bg-darken-1
+                          .media-body
+                            h6.media-heading.red.darken-1 99% Server load
+                            p.notification-text.font-small-3.text-muted Aliquam tincidunt mauris eu risus.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Five hour ago
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-alert-triangle.icon-bg-circle.bg-yellow.bg-darken-3
+                          .media-body
+                            h6.media-heading.yellow.darken-3 Warning notifixation
+                            p.notification-text.font-small-3.text-muted Vestibulum auctor dapibus neque.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Today
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-check-circle.icon-bg-circle.bg-cyan
+                          .media-body
+                            h6.media-heading Complete the task
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Last week
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-file.icon-bg-circle.bg-teal
+                          .media-body
+                            h6.media-heading Generate monthly report
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Last month
+                    li.dropdown-menu-footer
+                      a.dropdown-item.text-muted.text-center(href='javascript:void(0)') Read all notifications
+                li.dropdown.dropdown-notification.nav-item
+                  a.nav-link.nav-link-label(href='#' data-toggle='dropdown')
+                    i.ficon.feather.icon-mail
+                    span.badge.badge-pill.badge-warning.badge-up 3
+                  ul.dropdown-menu.dropdown-menu-media.dropdown-menu-right
+                    li.dropdown-menu-header
+                      h6.dropdown-header.m-0
+                        span.grey.darken-2 Messages
+                        span.notification-tag.badge.badge-warning.float-right.m-0 4 New
+                    li.scrollable-container.media-list
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            .avatar.avatar-online.avatar-sm.rounded-circle
+                              img(src='/images/avatar-s-1.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Margaret Govan
+                            p.notification-text.font-small-3.text-muted I like your portfolio, let's start.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Today
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            span.avatar.avatar-sm.avatar-busy.rounded-circle
+                              img(src='/images/avatar-s-2.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Bret Lezama
+                            p.notification-text.font-small-3.text-muted I have seen your work, there is
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Tuesday
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            .avatar.avatar-online.avatar-sm.rounded-circle
+                              img(src='/images/avatar-s-3.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Carie Berra
+                            p.notification-text.font-small-3.text-muted Can we have call in this week ?
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Friday
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            span.avatar.avatar-sm.avatar-away.rounded-circle
+                              img(src='/images/avatar-s-6.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Eric Alsobrook
+                            p.notification-text.font-small-3.text-muted We have project party this saturday.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') last month
+                    li.dropdown-menu-footer
+                      a.dropdown-item.text-muted.text-center(href='chat.html') Read all messages
+                li.dropdown.dropdown-user.nav-item
+                  a.dropdown-toggle.nav-link.dropdown-user-link(href='#' data-toggle='dropdown')
+                    .avatar.avatar-online
+                      img(src='/images/avatar-s-1.png' alt='avatar')
+                      i
+                    span.user-name Ram Ram
+                  .dropdown-menu.dropdown-menu-right
+                    a.dropdown-item(href='account.html')
+                      i.feather.icon-user
+                      |  Edit Profile
+                    a.dropdown-item(href='todo.html')
+                      i.feather.icon-check-square
+                      |  Task
+                    a.dropdown-item(href='chat.html')
+                      i.feather.icon-message-square
+                      |  Chats
+                    .dropdown-divider
+                    a.dropdown-item(href='login.html')
+                      i.feather.icon-power
+                      |  Logout
+      // END: Header
+      // BEGIN: Main Menu
+      .main-menu.menu-fixed.menu-dark.menu-accordion.menu-shadow(data-scroll-to-active='true')
+        .main-menu-content
+          ul#main-menu-navigation.navigation.navigation-main(data-menu='menu-navigation')
+            li.navigation-header
+              span Tổng quan
+              i.feather.icon-minus(data-toggle='tooltip' data-placement='right' data-original-title='General')
+            li.nav-item
+              a(href='index.html')
+                i.feather.icon-layout
+                span.menu-title(data-i18n='Layouts') Bảng
+              //
+                <ul class="menu-content">
+                <li><a class="menu-item" href="#" data-i18n="Page Layouts">Page Layouts</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="layout-1-column.html" data-i18n="1 column">1 column</a>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Content Det Sidebar">Content Det Sidebar</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="layout-content-detached-left-sidebar.html" data-i18n="Detached left sidebar">Detached left sidebar</a>
+                </li>
+                </ul>
+                </li>
+                <li class="navigation-divider"></li>
+                <li><a class="menu-item" href="layout-fixed-navbar.html" data-i18n="Fixed navbar">Fixed navbar</a>
+                </li>
+                <li class="navigation-divider"></li>
+                <li><a class="menu-item" href="layout-fixed.html" data-i18n="Fixed layout">Fixed layout</a>
+                </li>
+                <li class="navigation-divider"></li>
+                <li><a class="menu-item" href="layout-light.html" data-i18n="Light layout">Light layout</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Navbars">Navbars</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="navbar-light.html" data-i18n="Navbar Light">Navbar Light</a>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Hide on Scroll">Hide on Scroll</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="navbar-hide-on-scroll-top.html" data-i18n="Hide on Scroll Top">Hide on Scroll Top</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="navbar-components.html" data-i18n="Navbar Components">Navbar Components</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Vertical Nav">Vertical Nav</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="#" data-i18n="Navigation Types">Navigation Types</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="../vertical-menu-template" data-i18n="Vertical Menu">Vertical Menu</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="vertical-nav-tags-pills.html" data-i18n="Tags &amp; Pills">Tags &amp; Pills</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Horizontal Nav">Horizontal Nav</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="#" data-i18n="Navigation Types">Navigation Types</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="Classic">Classic</a>
+                </li>
+                <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="Nav Dark">Nav Dark</a>
+                </li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Page Headers">Page Headers</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="headers-breadcrumbs-basic.html" data-i18n="Breadcrumbs basic">Breadcrumbs basic</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Footers">Footers</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="footer-light.html" data-i18n="Footer Light">Footer Light</a>
+                </li>
+                </ul>
+                </li>
+                </ul>
+            li.navigation-header
+              span Các Nhóm
+              i.feather.icon-minus(data-toggle='tooltip' data-placement='right' data-original-title='Apps')
+            li.nav-item
+              a(href='')
+                i.feather.icon-users
+                span.menu-title(data-i18n='Contacts') Front-end
+              ul.menu-content
+                li
+                  a.menu-item(href='alltable.html' data-i18n='Page Layouts') Bảng
+                li
+                  a.menu-item(href='member.html' data-i18n='Page Layouts') Thành viên
+                li
+                  a.menu-item(href='todo.html' data-i18n='Page Layouts') Việc cần làm
+            li.nav-item
+              a(href='')
+                i.feather.icon-users
+                span.menu-title(data-i18n='Contacts') Intership
+              ul.menu-content
+                li
+                  a.menu-item(href='alltable.html' data-i18n='Page Layouts') Bảng
+                li
+                  a.menu-item(href='member.html' data-i18n='Page Layouts') Thành viên
+                li
+                  a.menu-item(href='todo.html' data-i18n='Page Layouts') Việc cần làm
+            li.nav-item
+              a(href='')
+                i.feather.icon-users
+                span.menu-title(data-i18n='Contacts') Web project
+              ul.menu-content
+                li
+                  a.menu-item(href='alltable.html' data-i18n='Page Layouts') Bảng
+                li
+                  a.menu-item(href='member.html' data-i18n='Page Layouts') Thành viên
+                li
+                  a.menu-item(href='todo.html' data-i18n='Page Layouts') Việc cần làm
+            //
+              <li class=" nav-item"><a href="chat.html"><i class="feather icon-message-square"></i><span class="menu-title" data-i18n="Chat Application">Chat Application</span></a>
+              </li>
+              <li class=" nav-item"><a href="todo.html"><i class="feather icon-check-square"></i><span class="menu-title" data-i18n="Todo Application">Todo Application</span></a>
+              </li>
+              <li class=" nav-item"><a href="table.html"><i class="feather icon-file-plus"></i><span class="menu-title" data-i18n="Kanban Application">Kanban Application</span></a>
+              </li>
+              <li class=" nav-item"><a href="member.html"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Contacts">Thành viên</span></a>
+              </li>
+            li.navigation-header
+              span Các Trang
+              i.feather.icon-minus(data-toggle='tooltip' data-placement='right' data-original-title='Pages')
+            li.nav-item
+              a(href='calendar.html')
+                i.feather.icon-plus-square
+                span.menu-title(data-i18n='Calender') Calender
+      // END: Main Menu
+      // BEGIN: Content
+      .app-content.content
+        .sidebar-left
+          .sidebar
+            .todo-sidebar.d-flex
+              span.sidebar-close-icon
+                i.feather.icon-x
+              // todo app menu
+              .todo-app-menu
+                .form-group.text-center.add-task
+                  // new task button
+                  button.btn.btn-danger.btn-glow.add-task-btn.btn-block.my-1(type='button')
+                    i.feather.icon-plus
+                    span New Task
+                // sidebar list start
+                .sidebar-menu-list
+                  .list-group
+                    a.list-group-item.border-0.active(href='#')
+                      span.fonticon-wrap.mr-50
+                        i.feather.icon-align-justify
+                      span  All
+                  label.filter-label.mt-2.mb-1.pt-25 Filters
+                  .list-group
+                    a.list-group-item.border-0(href='#')
+                      span.fonticon-wrap.mr-50
+                        i.feather.icon-star
+                      span Favourites
+                    a.list-group-item.border-0(href='#')
+                      span.fonticon-wrap.mr-50
+                        i.feather.icon-check
+                      span Done
+                    a.list-group-item.border-0(href='#')
+                      span.fonticon-wrap.mr-50
+                        i.feather.icon-trash-2
+                      span Deleted
+                  label.filter-label.mt-2.mb-1.pt-25 Labels
+                  .list-group
+                    a.list-group-item.border-0.d-flex.align-items-center.justify-content-between(href='#')
+                      span Frontend
+                      span.bullet.bullet-sm.bullet-primary
+                    a.list-group-item.border-0.d-flex.align-items-center.justify-content-between(href='#')
+                      span Backend
+                      span.bullet.bullet-sm.bullet-success
+                    a.list-group-item.border-0.d-flex.align-items-center.justify-content-between(href='#')
+                      span Issue
+                      span.bullet.bullet-sm.bullet-danger
+                    a.list-group-item.border-0.d-flex.align-items-center.justify-content-between(href='#')
+                      span Design
+                      span.bullet.bullet-sm.bullet-warning
+                    a.list-group-item.border-0.d-flex.align-items-center.justify-content-between(href='#')
+                      span Wireframe
+                      span.bullet.bullet-sm.bullet-info
+                // sidebar list end
+                // todo new task sidebar
+                .todo-new-task-sidebar
+                  .card.shadow-none.p-0.m-0
+                    .card-header.border-bottom.py-75
+                      .task-header.d-flex.justify-content-between.align-items-center
+                        h5.new-task-title.mb-0 New Task
+                        button.mark-complete-btn.btn.btn-primary.btn-sm
+                          i.feather.icon-check.align-middle
+                          span.mark-complete.align-middle Mark Complete
+                        span.dropdown.mr-1
+                          i.feather.icon-paperclip.cursor-pointer.mr-50
+                          a#todo-sidebar-dropdown.dropdown-toggle(href='#' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                            i.feather.icon-more-vertical
+                          span.dropdown-menu.dropdown-menu-right(aria-labelledby='todo-sidebar-dropdown')
+                            a.dropdown-item(href='#') Add to another project 
+                            a.dropdown-item(href='#') Create follow up task
+                            a.dropdown-item(href='#') Print
+                      button.close.close-icon(type='button')
+                        i.feather.icon-x.align-middle
+                    // form start
+                    form#compose-form.mt-1
+                      .card-content
+                        .card-body.py-0.border-bottom
+                          .form-group
+                            // text area for task title
+                            textarea.form-control.task-title(name='title' cols='1' rows='2' placeholder='Write a Task Name' required='') 			  
+                          .assigned.d-flex.justify-content-between
+                            .form-group.d-flex.align-items-center.mr-1
+                              // users avatar
+                              .avatar
+                                img.avatar-user-image.d-none(src='#' alt='#' width='38' height='38')
+                                .avatar-content
+                                  i.feather.icon-user.font-medium-4
+                              // select2  for user name
+                              .select-box.mr-1
+                                select#select2-users-name.select2-users-name.form-control
+                                  optgroup(label='Backend')
+                                    option(value='David Smith') David Smith
+                                    option(value='John Doe') John Doe
+                                    option(value='James Smith') James Smith
+                                    option(value='Maria Garcia') Maria Garcia
+                                  optgroup(label='Frontend')
+                                    option(value='Maria Rodrigu') Maria Rodrigu
+                                    option(value='Marry Smith') Marry Smith
+                                    option(value='Maria Hern') Maria Hern
+                                    option(value='Jamesh J') Jamesh Jackson
+                            .form-group.d-flex.align-items-center.position-relative
+                              // date picker
+                              .date-icon.mr-50.font-medium-3
+                                i.feather.icon-calendar
+                              .date-picker
+                                input.pickadate.form-control.pl-1(type='text' placeholder='Due Date')
+                        .card-body.border-bottom.task-description
+                          // Quill editor for task description
+                          .snow-container.border.rounded.p-50
+                            .compose-editor.mx-75
+                            .d-flex.justify-content-end
+                              .compose-quill-toolbar.pb-0
+                                span.ql-formats.mr-0
+                                  button.ql-bold
+                                  button.ql-link
+                                  button.ql-image
+                          .tag.d-flex.justify-content-between.align-items-center.pt-1
+                            .flex-grow-1.d-flex.align-items-center
+                              i.feather.icon-tag.align-middle.mr-25
+                              select#select2-assign-label.select2-assign-label.form-control(multiple='multiple' disabled='')
+                                optgroup(label='Tags')
+                                  option(value='Frontend') Frontend
+                                  option(value='Backend') Backend
+                                  option(value='Issue') Issue
+                                  option(value='Design') Design
+                                  option(value='Wireframe') Wireframe
+                            .ml-25
+                              i.feather.icon-plus-circle.cursor-pointer.add-tags
+                        .card-body.pb-1
+                          .d-flex.align-items-center.mb-1
+                            .avatar.mr-75
+                              img(src='/images/avatar-s-3.png' alt='charlie' width='38' height='38')
+                            .avatar-content
+                              | Charlie created this task
+                            small.ml-75.text-muted 13 days ago
+                          // quill editor for comment
+                          .snow-container.border.rounded.p-50
+                            .comment-editor.mx-75
+                            .d-flex.justify-content-end
+                              .comment-quill-toolbar.pb-0
+                                span.ql-formats.mr-0
+                                  button.ql-bold
+                                  button.ql-link
+                                  button.ql-image
+                              button.btn.btn-sm.btn-primary.comment-btn(type='button')
+                                span Comment
+                          .mt-1.d-flex.justify-content-end
+                            button.btn.btn-danger.add-todo(type='button') Add Task
+                            button.btn.btn-danger.update-todo(type='button') Save Changes
+                    // form start end
+        .content-right
+          .content-overlay
+          .content-wrapper
+            .content-header.row
+            .content-body
+              .app-content-overlay
+              .todo-app-area
+                .todo-app-list-wrapper
+                  .todo-app-list
+                    .todo-fixed-search.d-flex.justify-content-between.align-items-center
+                      .sidebar-toggle.d-block.d-lg-none
+                        i.feather.icon-menu
+                      fieldset.form-group.position-relative.has-icon-left.m-0.flex-grow-1.pl-2
+                        input#todo-search.form-control.todo-search(type='text' placeholder='Search Task')
+                        .form-control-position
+                          i.feather.icon-search
+                      .todo-sort.dropdown.mr-1
+                        button#sortDropdown.btn.dropdown-toggle.sorting(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                          i.feather.icon-filter
+                          span Sort
+                        .dropdown-menu.dropdown-menu-right(aria-labelledby='sortDropdown')
+                          a.dropdown-item.ascending(href='#') Ascending
+                          a.dropdown-item.descending(href='#') Descending
+                    .todo-task-list.list-group
+                      // task list start
+                      ul#todo-task-list-drag.todo-task-list-wrapper.list-unstyled
+                        li.todo-item(data-name='David Smith')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox1.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox1')
+                              p.todo-title.mx-50.m-0.truncate Effective Hypnosis Quit Smoking Methods
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                                span.badge.badge-primary.badge-pill Frontend
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-1.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='John Doe')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox2.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox2')
+                              p.todo-title.mx-50.m-0.truncate How To Protect Your Computer Very Useful Tips
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-2.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75.warning
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='James Smith')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox14.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox14')
+                              p.todo-title.mx-50.m-0.truncate It is a good idea to think of your PC as an office.
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                                span.badge.badge-primary.badge-pill Frontend
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-3.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='Maria Garcia')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox4.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox4')
+                              p.todo-title.mx-50.m-0.truncate Don't Let The Outtakes Take You Out
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                                span.badge.badge-danger.badge-pill.ml-50 Issue
+                                span.badge.badge-pill.badge-success.ml-50 Backend
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-4.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75.warning
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='Maria Rodrigu')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox5.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox5')
+                              p.todo-title.mx-50.m-0.truncate Sony laptops are among the most well known laptops on today
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-5.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='Marry Smith')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox6.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox6')
+                              p.todo-title.mx-50.m-0.truncate Success Steps For Your Personal Or Business Life
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-6.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='Maria Hern')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox7.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox7')
+                              p.todo-title.mx-50.m-0.truncate Believing Is The Absence Of Doubt
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-7.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='Jamesh Jackson')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox8.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox8')
+                              p.todo-title.mx-50.m-0.truncate Are You Struggling In Life
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                                span.badge.badge-danger.badge-pill.ml-50 Issue
+                                span.badge.badge-pill.badge-success.ml-50 Backend
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-8.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='David Smith')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox9.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox9')
+                              p.todo-title.mx-50.m-0.truncate Hypnotherapy For Motivation Getting The Drive Back
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                              span.avatar.badge-primary DS
+                              a.todo-item-favorite.ml-75.warning
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='John Doe')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox10.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox10')
+                              p.todo-title.mx-50.m-0.truncate Fix Responsiveness
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                                span.badge.badge-warning.badge-pill.ml-50 Design
+                                span.badge.badge-primary.badge-pill.ml-50 Frontend
+                                span.badge.badge-secondary.badge-pill.ml-50(data-tag='ISSUE,BACKEND' data-toggle='tooltip' data-placement='bottom' title='ISSUE,BACKEND')
+                                  i.feather.icon-more-horizontal.font-small-1
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-10.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='James Smith')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox11.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox11')
+                              p.todo-title.mx-50.m-0.truncate Buying Used Electronic Test Equipment.
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-11.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='Marry Smith')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox12.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox12')
+                              p.todo-title.mx-50.m-0.truncate Get The Boot A Birds Eye Look Into Mcse Boot Camps
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                                span.badge.badge-warning.badge-pill Design
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-2.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='Maria Garcia')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox13.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox13')
+                              p.todo-title.mx-50.m-0.truncate Dealing With Technical Support 10 Useful Tips
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                                span.badge.badge-pill.badge-success Backend
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-13.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='Maria Rodrigu')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox15.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox15')
+                              p.todo-title.mx-50.m-0.truncate How Hypnosis Can Help You
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                              span.avatar.badge-primary MR
+                              a.todo-item-favorite.ml-75.warning
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='David Smith')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox16.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox16')
+                              p.todo-title.mx-50.m-0.truncate Effective Hypnosis Quit Smoking Methods
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                                span.badge.badge-primary.badge-pill Frontend
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-1.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='John Doe')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox17.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox17')
+                              p.todo-title.mx-50.m-0.truncate How To Protect Your Computer Very Useful Tips
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-2.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='Jamesh Jackson')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox81.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox81')
+                              p.todo-title.mx-50.m-0.truncate Are You Struggling In Life
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                                span.badge.badge-danger.badge-pill.ml-50 Issue
+                                span.badge.badge-pill.badge-success.ml-50 Backend
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-8.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='David Smith')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox91.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox91')
+                              p.todo-title.mx-50.m-0.truncate Hypnotherapy For Motivation Getting The Drive Back
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                              span.avatar.badge-primary DS
+                              a.todo-item-favorite.ml-75.warning
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='John Doe')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox101.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox101')
+                              p.todo-title.mx-50.m-0.truncate Fix Responsiveness
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                                span.badge.badge-warning.badge-pill.ml-50 Design
+                                span.badge.badge-primary.badge-pill.ml-50 Frontend
+                                span.badge.badge-secondary.badge-pill.ml-50(data-tag='ISSUE,BACKEND' data-toggle='tooltip' data-placement='bottom' title='ISSUE,BACKEND')
+                                  i.feather.icon-more-horizontal.font-small-1
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-10.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                        li.todo-item(data-name='James Smith')
+                          .todo-title-wrapper.d-flex.justify-content-sm-between.justify-content-end.align-items-center
+                            .todo-title-area.d-flex
+                              i.feather.icon-more-vertical.handle
+                              .custom-control.custom-checkbox
+                                input#checkbox111.custom-control-input(type='checkbox')
+                                label.custom-control-label(for='checkbox111')
+                              p.todo-title.mx-50.m-0.truncate Buying Used Electronic Test Equipment.
+                            .todo-item-action.d-flex.align-items-center
+                              .todo-badge-wrapper.d-flex
+                              .avatar.ml-1
+                                img(src='/images/avatar-s-11.png' alt='avatar' height='30' width='30')
+                              a.todo-item-favorite.ml-75
+                                i.feather.icon-star
+                              a.todo-item-delete.ml-75
+                                i.feather.icon-trash-2
+                      // task list end
+                      .no-results
+                        h5 No Items Found
+      // END: Content
+      // BEGIN: Footer
+      footer.footer.footer-static.footer-light.navbar-border
+        p.clearfix.blue-grey.lighten-2.text-sm-center.mb-0.px-2
+          span.float-md-left.d-block.d-md-inline-block
+            a.text-bold-800.grey.darken-2 PHANTHITHUHANG
+          span.float-md-right.d-none.d-lg-block
+            | Đồ án thực tập 
+            i.feather.icon-heart.pink
+      // END: Footer
+      // BEGIN: Vendor JS
+      script(src='/js/vendors.min.js')
+      // BEGIN Vendor JS
+      // BEGIN: Page Vendor JS
+      script(src='/js/moment.min.js')
+      script(src='/js/daterangepicker.js')
+      script(src='/js/select2.full.min.js')
+      script(src='/js//quill.js')
+      script(src='/js/dragula.min.js')
+      // END: Page Vendor JS
+      // BEGIN: Theme JS
+      script(src='/js/app-menu.min.js')
+      script(src='/js/app.min.js')
+      // END: Theme JS
+      // BEGIN: Page JS
+      script(src='/js/app-todo.min.js')
+      // END: Page JS
+      // END: Body

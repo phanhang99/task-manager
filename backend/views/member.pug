@@ -1,0 +1,1795 @@
+doctype html
+html.loading(lang='en' data-textdirection='ltr')
+  // BEGIN: Head
+  head
+    meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui')
+    meta(name='description' content='Stack admin is super flexible, powerful, clean & modern responsive bootstrap 4 admin template with unlimited possibilities.')
+    meta(name='keywords' content='admin template, stack admin template, dashboard template, flat admin template, responsive admin template, web app')
+    meta(name='author' content='PIXINVENT')
+    title Contacts - Stack Responsive Bootstrap 4 Admin Template
+    link(rel='apple-touch-icon' href='/images/apple-icon-120.png')
+    link(rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i' rel='stylesheet')
+    // BEGIN: Vendor CSS
+    link(rel='stylesheet' type='text/css' href='/css/vendors.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/dataTables.bootstrap4.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/rowReorder.dataTables.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/responsive.dataTables.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/icheck.css')
+    link(rel='stylesheet' type='text/css' href='/css/custom.css')
+    // END: Vendor CSS
+    // BEGIN: Theme CSS
+    link(rel='stylesheet' type='text/css' href='/css/bootstrap.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/bootstrap-extended.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/colors.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/components.min.css')
+    // END: Theme CSS
+    // BEGIN: Page CSS
+    link(rel='stylesheet' type='text/css' href='/css/vertical-menu-modern.css')
+    link(rel='stylesheet' type='text/css' href='/css/palette-gradient.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/app-contacts.min.css')
+    // END: Page CSS
+    // BEGIN: Custom CSS
+    link(rel='stylesheet' type='text/css' href='/css/style.css')
+    // END: Custom CSS
+    // END: Head
+    // BEGIN: Body
+    body.vertical-layout.vertical-menu-modern.content-detached-left-sidebar.app-contacts.fixed-navbar(data-open='click' data-menu='vertical-menu-modern' data-col='content-detached-left-sidebar')
+      // BEGIN: Header
+      nav.header-navbar.navbar-expand-lg.navbar.navbar-with-menu.fixed-top.navbar-semi-dark
+        .navbar-wrapper
+          .navbar-header
+            ul.nav.navbar-nav.flex-row
+              li.nav-item.mobile-menu.d-lg-none.mr-auto
+                a.nav-link.nav-menu-main.menu-toggle.hidden-xs(href='#')
+                  i.feather.icon-menu.font-large-1
+              li.nav-item.mr-auto
+                a.navbar-brand(href='/index.html')
+                  img.brand-logo(alt='stack admin logo' src='/images/stack-logo-light.png')
+                  h2.brand-text JS
+              li.nav-item.d-none.d-lg-block.nav-toggle
+                a.nav-link.modern-nav-toggle.pr-0(data-toggle='collapse')
+                  i.toggle-icon.feather.icon-toggle-right.font-medium-3.white(data-ticon='feather.icon-toggle-right')
+              li.nav-item.d-lg-none
+                a.nav-link.open-navbar-container(data-toggle='collapse' data-target='#navbar-mobile')
+                  i.fa.fa-ellipsis-v
+          .navbar-container.content
+            #navbar-mobile.collapse.navbar-collapse
+              ul.nav.navbar-nav.mr-auto.float-left
+              ul.nav.navbar-nav.float-right
+                //
+                  <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-gb"></i><span class="selected-language"></span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a><a class="dropdown-item" href="#" data-language="fr"><i class="flag-icon flag-icon-fr"></i> French</a><a class="dropdown-item" href="#" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a><a class="dropdown-item" href="#" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a></div>
+                  </li>
+                li.dropdown.dropdown-notification.nav-item
+                  a.nav-link.nav-link-label(href='#' data-toggle='dropdown')
+                    i.ficon.feather.icon-bell
+                    span.badge.badge-pill.badge-danger.badge-up 5
+                  ul.dropdown-menu.dropdown-menu-media.dropdown-menu-right
+                    li.dropdown-menu-header
+                      h6.dropdown-header.m-0
+                        span.grey.darken-2 Notifications
+                        span.notification-tag.badge.badge-danger.float-right.m-0 5 New
+                    li.scrollable-container.media-list
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-plus-square.icon-bg-circle.bg-cyan
+                          .media-body
+                            h6.media-heading You have new order!
+                            p.notification-text.font-small-3.text-muted Lorem ipsum dolor sit amet, consectetuer elit.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') 30 minutes ago
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-download-cloud.icon-bg-circle.bg-red.bg-darken-1
+                          .media-body
+                            h6.media-heading.red.darken-1 99% Server load
+                            p.notification-text.font-small-3.text-muted Aliquam tincidunt mauris eu risus.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Five hour ago
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-alert-triangle.icon-bg-circle.bg-yellow.bg-darken-3
+                          .media-body
+                            h6.media-heading.yellow.darken-3 Warning notifixation
+                            p.notification-text.font-small-3.text-muted Vestibulum auctor dapibus neque.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Today
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-check-circle.icon-bg-circle.bg-cyan
+                          .media-body
+                            h6.media-heading Complete the task
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Last week
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-file.icon-bg-circle.bg-teal
+                          .media-body
+                            h6.media-heading Generate monthly report
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Last month
+                    li.dropdown-menu-footer
+                      a.dropdown-item.text-muted.text-center(href='javascript:void(0)') Read all notifications
+                li.dropdown.dropdown-notification.nav-item
+                  a.nav-link.nav-link-label(href='#' data-toggle='dropdown')
+                    i.ficon.feather.icon-mail
+                    span.badge.badge-pill.badge-warning.badge-up 3
+                  ul.dropdown-menu.dropdown-menu-media.dropdown-menu-right
+                    li.dropdown-menu-header
+                      h6.dropdown-header.m-0
+                        span.grey.darken-2 Messages
+                        span.notification-tag.badge.badge-warning.float-right.m-0 4 New
+                    li.scrollable-container.media-list
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            .avatar.avatar-online.avatar-sm.rounded-circle
+                              img(src='/images/avatar-s-1.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Margaret Govan
+                            p.notification-text.font-small-3.text-muted I like your portfolio, let's start.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Today
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            span.avatar.avatar-sm.avatar-busy.rounded-circle
+                              img(src='/images/avatar-s-2.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Bret Lezama
+                            p.notification-text.font-small-3.text-muted I have seen your work, there is
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Tuesday
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            .avatar.avatar-online.avatar-sm.rounded-circle
+                              img(src='/images/avatar-s-3.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Carie Berra
+                            p.notification-text.font-small-3.text-muted Can we have call in this week ?
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Friday
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            span.avatar.avatar-sm.avatar-away.rounded-circle
+                              img(src='/images/avatar-s-6.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Eric Alsobrook
+                            p.notification-text.font-small-3.text-muted We have project party this saturday.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') last month
+                    li.dropdown-menu-footer
+                      a.dropdown-item.text-muted.text-center(href='chat.html') Read all messages
+                li.dropdown.dropdown-user.nav-item
+                  a.dropdown-toggle.nav-link.dropdown-user-link(href='#' data-toggle='dropdown')
+                    .avatar.avatar-online
+                      img(src='/images/avatar-s-1.png' alt='avatar')
+                      i
+                    span.user-name Ram Ram
+                  .dropdown-menu.dropdown-menu-right
+                    a.dropdown-item(href='account.html')
+                      i.feather.icon-user
+                      |  Edit Profile
+                    a.dropdown-item(href='todo.html')
+                      i.feather.icon-check-square
+                      |  Task
+                    a.dropdown-item(href='chat.html')
+                      i.feather.icon-message-square
+                      |  Chats
+                    .dropdown-divider
+                    a.dropdown-item(href='login.html')
+                      i.feather.icon-power
+                      |  Logout
+      // END: Header
+      // BEGIN: Main Menu
+      .main-menu.menu-fixed.menu-dark.menu-accordion.menu-shadow(data-scroll-to-active='true')
+        .main-menu-content
+          ul#main-menu-navigation.navigation.navigation-main(data-menu='menu-navigation')
+            li.navigation-header
+              span Tổng quan
+              i.feather.icon-minus(data-toggle='tooltip' data-placement='right' data-original-title='General')
+            li.nav-item
+              a(href='index.html')
+                i.feather.icon-layout
+                span.menu-title(data-i18n='Layouts') Bảng
+              //
+                <ul class="menu-content">
+                <li><a class="menu-item" href="#" data-i18n="Page Layouts">Page Layouts</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="layout-1-column.html" data-i18n="1 column">1 column</a>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Content Det Sidebar">Content Det Sidebar</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="layout-content-detached-left-sidebar.html" data-i18n="Detached left sidebar">Detached left sidebar</a>
+                </li>
+                </ul>
+                </li>
+                <li class="navigation-divider"></li>
+                <li><a class="menu-item" href="layout-fixed-navbar.html" data-i18n="Fixed navbar">Fixed navbar</a>
+                </li>
+                <li class="navigation-divider"></li>
+                <li><a class="menu-item" href="layout-fixed.html" data-i18n="Fixed layout">Fixed layout</a>
+                </li>
+                <li class="navigation-divider"></li>
+                <li><a class="menu-item" href="layout-light.html" data-i18n="Light layout">Light layout</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Navbars">Navbars</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="navbar-light.html" data-i18n="Navbar Light">Navbar Light</a>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Hide on Scroll">Hide on Scroll</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="navbar-hide-on-scroll-top.html" data-i18n="Hide on Scroll Top">Hide on Scroll Top</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="navbar-components.html" data-i18n="Navbar Components">Navbar Components</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Vertical Nav">Vertical Nav</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="#" data-i18n="Navigation Types">Navigation Types</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="../vertical-menu-template" data-i18n="Vertical Menu">Vertical Menu</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="vertical-nav-tags-pills.html" data-i18n="Tags &amp; Pills">Tags &amp; Pills</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Horizontal Nav">Horizontal Nav</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="#" data-i18n="Navigation Types">Navigation Types</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="Classic">Classic</a>
+                </li>
+                <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="Nav Dark">Nav Dark</a>
+                </li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Page Headers">Page Headers</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="headers-breadcrumbs-basic.html" data-i18n="Breadcrumbs basic">Breadcrumbs basic</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Footers">Footers</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="footer-light.html" data-i18n="Footer Light">Footer Light</a>
+                </li>
+                </ul>
+                </li>
+                </ul>
+            li.navigation-header
+              span Các Nhóm
+              i.feather.icon-minus(data-toggle='tooltip' data-placement='right' data-original-title='Apps')
+            li.nav-item
+              a(href='')
+                i.feather.icon-users
+                span.menu-title(data-i18n='Contacts') Front-end
+              ul.menu-content
+                li
+                  a.menu-item(href='alltable.html' data-i18n='Page Layouts') Bảng
+                li
+                  a.menu-item(href='member.html' data-i18n='Page Layouts') Thành viên
+                li
+                  a.menu-item(href='todo.html' data-i18n='Page Layouts') Việc cần làm
+            li.nav-item
+              a(href='')
+                i.feather.icon-users
+                span.menu-title(data-i18n='Contacts') Intership
+              ul.menu-content
+                li
+                  a.menu-item(href='alltable.html' data-i18n='Page Layouts') Bảng
+                li
+                  a.menu-item(href='member.html' data-i18n='Page Layouts') Thành viên
+                li
+                  a.menu-item(href='todo.html' data-i18n='Page Layouts') Việc cần làm
+            li.nav-item
+              a(href='')
+                i.feather.icon-users
+                span.menu-title(data-i18n='Contacts') Web project
+              ul.menu-content
+                li
+                  a.menu-item(href='alltable.html' data-i18n='Page Layouts') Bảng
+                li
+                  a.menu-item(href='member.html' data-i18n='Page Layouts') Thành viên
+                li
+                  a.menu-item(href='todo.html' data-i18n='Page Layouts') Việc cần làm
+            //
+              <li class=" nav-item"><a href="chat.html"><i class="feather icon-message-square"></i><span class="menu-title" data-i18n="Chat Application">Chat Application</span></a>
+              </li>
+              <li class=" nav-item"><a href="todo.html"><i class="feather icon-check-square"></i><span class="menu-title" data-i18n="Todo Application">Todo Application</span></a>
+              </li>
+              <li class=" nav-item"><a href="table.html"><i class="feather icon-file-plus"></i><span class="menu-title" data-i18n="Kanban Application">Kanban Application</span></a>
+              </li>
+              <li class=" nav-item"><a href="member.html"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Contacts">Thành viên</span></a>
+              </li>
+            li.navigation-header
+              span Các Trang
+              i.feather.icon-minus(data-toggle='tooltip' data-placement='right' data-original-title='Pages')
+            li.nav-item
+              a(href='calendar.html')
+                i.feather.icon-plus-square
+                span.menu-title(data-i18n='Calender') Calender
+      // END: Main Menu
+      // BEGIN: Content
+      .app-content.content
+        .content-detached.content-right
+          .content-body
+            section.row
+              .col-12
+                .card
+                  .card-body
+                    .bug-list-search
+                      .bug-list-search-content
+                        .sidebar-toggle.d-block.d-lg-none
+                          i.feather.icon-menu.font-large-1
+                        form(action='#')
+                          .position-relative
+                            input#search-contacts.form-control(type='search' placeholder='Tìm thành viên...')
+                            .form-control-position
+                              i.fa.fa-search.text-size-base.text-muted.la-rotate-270
+            section.row.all-contacts
+              .col-12
+                .card
+                  .card-head
+                    .card-header
+                      h4.card-title Tất cả thành viên
+                      .heading-elements.mt-0
+                        button.btn.btn-primary.btn-md(data-toggle='modal' data-target='#AddContactModal')
+                          i.d-md-none.d-block.feather.icon-plus.white
+                          span.d-md-block.d-none Thêm thành viên
+                        #AddContactModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel1' aria-hidden='true')
+                          .modal-dialog(role='document')
+                            .modal-content
+                              section.contact-form
+                                form#form-add-contact.contact-input
+                                  .modal-header
+                                    h5#exampleModalLabel1.modal-title Add New Contact
+                                    button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                      span(aria-hidden='true') ×
+                                  .modal-body
+                                    fieldset.form-group.col-12
+                                      input#contact-name.contact-name.form-control(type='text' placeholder='Name')
+                                    fieldset.form-group.col-12
+                                      input#contact-email.contact-email.form-control(type='text' placeholder='Email')
+                                    fieldset.form-group.col-12
+                                      input#contact-phone.contact-phone.form-control(type='text' placeholder='Phone Number')
+                                    fieldset.form-group.col-12
+                                      input#favorite.contact-fav.input-chk(type='checkbox')
+                                      |  Favorite
+                                    fieldset.form-group.col-12
+                                      input#user-image.form-control-file(type='file')
+                                  .modal-footer
+                                    fieldset.form-group.position-relative.has-icon-left.mb-0
+                                      button#add-contact-item.btn.btn-info.add-contact-item(type='button' data-dismiss='modal')
+                                        i.fa.fa-paper-plane-o.d-block.d-lg-none
+                                        span.d-none.d-lg-block Add New
+                        #EditContactModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='exampleModalLabel' aria-hidden='true')
+                          .modal-dialog(role='document')
+                            .modal-content
+                              section.contact-form
+                                form#form-edit-contact.contact-input
+                                  .modal-header
+                                    h5#exampleModalLabel.modal-title Edit Contact
+                                    button.close(type='button' data-dismiss='modal' aria-label='Close')
+                                      span(aria-hidden='true') ×
+                                  .modal-body
+                                    fieldset.form-group.col-12
+                                      input#name.name.form-control(type='text' placeholder='Name')
+                                    fieldset.form-group.col-12
+                                      input#email.email.form-control(type='text' placeholder='Email')
+                                    fieldset.form-group.col-12
+                                      input#phone.phone.form-control(type='text' placeholder='Phone Number')
+                                    span#fav.d-none
+                                  .modal-footer
+                                    fieldset.form-group.position-relative.has-icon-left.mb-0
+                                      button#edit-contact-item.btn.btn-info.edit-contact-item(type='button' data-dismiss='modal')
+                                        i.fa.fa-paper-plane-o.d-lg-none
+                                        span.d-none.d-lg-block Edit
+                        //
+                          <span class="dropdown">
+                          <button id="btnSearchDrop1" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" class="btn btn-warning dropdown-menu-right dropdown-toggle btn-md">
+                          <i class="feather icon-download-cloud white"></i></button>
+                          <span aria-labelledby="btnSearchDrop1" class="dropdown-menu dropdown-menu-right mt-1">
+                          <a href="#" class="dropdown-item"><i class="feather icon-upload"></i> Import</a>
+                          <a href="#" class="dropdown-item"><i class="feather icon-download"></i> Export</a>
+                          <a href="#" class="dropdown-item"><i class="feather icon-shuffle"></i> Find Duplicate</a>
+                          </span>
+                          </span>
+                        button.btn.btn-default.btn-sm
+                          i.feather.icon-settings.white
+                  .card-content
+                    .card-body
+                      // Task List table
+                      button.btn.btn-danger.btn-sm.delete-all.mb-1(type='button') Delete All
+                      .table-responsive
+                        table#users-contacts.table.table-white-space.table-bordered.row-grouping.display.no-wrap.icheck.table-middle.text-center
+                          thead
+                            tr
+                              th
+                                input#check-all.input-chk(type='checkbox' onclick='toggle();')
+                              th Name
+                              th Email
+                              th Phone
+                              th Favorite
+                              th Actions
+                          tbody
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-2.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Alice Collins
+                              td.text-center
+                                a.email(href='mailto:email@example.com') alice@example.com
+                              td.phone +658-254-256
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop2.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop2')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-11.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle.mt-50
+                                    a.media-heading.name Margaret Govan
+                              td.text-center
+                                a.email(href='mailto:email@example.com') margaret@example.com
+                              td.phone +125-654-564
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop3.dropdown-toggle.dropdown-menu-right.secondary(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop3')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-14.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Eugene Woods
+                              td.text-center
+                                a.email(href='mailto:email@example.com') eugene@example.com
+                              td.phone +987-654-564
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop4.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop4')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-3.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Russell Bryant
+                              td.text-center
+                                a.email(href='mailto:email@example.com') russell@example.com
+                              td.phone +235-654-564
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop5.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop5')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-6.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Cynthia Tucker
+                              td.text-center
+                                a.email(href='mailto:email@example.com') cynthia@example.com
+                              td.phone +987-654-564
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop6.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop6')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-busy.rounded-circle
+                                      img(src='/images/avatar-s-5.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Scott Marshall
+                              td.text-center
+                                a.email(href='mailto:email@example.com') scott@example.com
+                              td.phone +954-654-564
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop7.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop7')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-away.rounded-circle
+                                      img(src='/images/avatar-s-8.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Catherine Smith
+                              td.text-center
+                                a.email(href='mailto:email@example.com') catherine@example.com
+                              td.phone +254-654-564
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop8.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop8')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-off.rounded-circle
+                                      img(src='/images/avatar-s-7.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Eric Howard
+                              td.text-center
+                                a.email(href='mailto:email@example.com') eric@example.com
+                              td.phone +545-654-564
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop9.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop9')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-9.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Donald Watkins
+                              td.text-center
+                                a.email(href='mailto:email@example.com') donald@example.com
+                              td.phone +987-654-564
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop10.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop10')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-10.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Brittany Barnes
+                              td.text-center
+                                a.email(href='mailto:email@example.com') brittany@example.com
+                              td.phone +632-654-564
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop11.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop11')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-busy.rounded-circle
+                                      img(src='/images/avatar-s-5.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Andrew Marsh
+                              td.text-center
+                                a.email(href='mailto:email@example.com') andrew@example.com
+                              td.phone +932-741-123
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop12.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop12')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-away.rounded-circle
+                                      img(src='/images/avatar-s-18.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Cherry Smith
+                              td.text-center
+                                a.email(href='mailto:email@example.com') cherry@example.com
+                              td.phone +296-021-604
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop13.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop13')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-off.rounded-circle
+                                      img(src='/images/avatar-s-17.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Erica Red
+                              td.text-center
+                                a.email(href='mailto:email@example.com') erica@example.com
+                              td.phone +595-680-123
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop14.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop14')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-9.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Will Trumpt
+                              td.text-center
+                                a.email(href='mailto:email@example.com') will@example.com
+                              td.phone +289-614-504
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop15.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop15')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-10.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Verty Barny
+                              td.text-center
+                                a.email(href='mailto:email@example.com') verty@example.com
+                              td.phone +132-954-114
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop16.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop16')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-2.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Steffy Agile
+                              td.text-center
+                                a.email(href='mailto:email@example.com') steffy@example.com
+                              td.phone +699-654-238
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop17.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop17')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-1.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Meggi Jelly
+                              td.text-center
+                                a.email(href='mailto:email@example.com') meggi@example.com
+                              td.phone +932-854-554
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop18.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop18')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-4.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Ken Woodsy
+                              td.text-center
+                                a.email(href='mailto:email@example.com') ken@example.com
+                              td.phone +896-320-964
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop19.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop19')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-13.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Rushee Brent
+                              td.text-center
+                                a.email(href='mailto:email@example.com') rushee@example.com
+                              td.phone +135-614-594
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop20.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop20')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-6.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Sinthia Tecker
+                              td.text-center
+                                a.email(href='mailto:email@example.com') Sinthia@example.com
+                              td.phone +987-654-564
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop21.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop21')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-4.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Rose Wends
+                              td.text-center
+                                a.email(href='mailto:email@example.com') rose@example.com
+                              td.phone +387-694-567
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop22.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop22')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-3.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.name.media-heading Russell Bryant
+                              td.text-center
+                                a.email(href='mailto:email@example.com') grees@example.com
+                              td.phone +295-634-567
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop23.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop23')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-16.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Chimmi React
+                              td.text-center
+                                a.email(href='mailto:email@example.com') chimmi@example.com
+                              td.phone +997-684-565
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop24.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop24')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-22.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Andy Chews
+                              td.text-center
+                                a.email(href='mailto:email@example.com') andy@example.com
+                              td.phone +987-478-965
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop25.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop25')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-1.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Missy Loen
+                              td.text-center
+                                a.email(href='mailto:email@example.com') missi@example.com
+                              td.phone +987-654-564
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop26.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop26')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-busy.rounded-circle
+                                      img(src='/images/avatar-s-5.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Prezi Henz
+                              td.text-center
+                                a.email(href='mailto:email@example.com') prezi@example.com
+                              td.phone +194-854-857
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop27.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop27')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-away.rounded-circle
+                                      img(src='/images/avatar-s-8.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name John Stric
+                              td.text-center
+                                a.email(href='mailto:email@example.com') john@example.com
+                              td.phone +154-704-904
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop28.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop28')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-off.rounded-circle
+                                      img(src='/images/avatar-s-7.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Creta Hord
+                              td.text-center
+                                a.email(href='mailto:email@example.com') creta@example.com
+                              td.phone +165-651-594
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop29.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop29')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-9.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Daizy kigs
+                              td.text-center
+                                a.email(href='mailto:email@example.com') daizy@example.com
+                              td.phone +627-054-524
+                              td.text-center
+                                .favorite.active
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop30.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop30')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                            tr
+                              td
+                                input.input-chk.check(type='checkbox')
+                              td
+                                .media
+                                  .media-left.pr-1
+                                    span.avatar.avatar-sm.avatar-online.rounded-circle
+                                      img(src='/images/avatar-s-10.png' alt='avatar')
+                                      i
+                                  .media-body.media-middle
+                                    a.media-heading.name Lara Barndy
+                              td.text-center
+                                a.email(href='mailto:email@example.com') lara@example.com
+                              td.phone +502-611-569
+                              td.text-center
+                                .favorite
+                                  i.feather.icon-star
+                              td
+                                a.primary.edit.mr-1(data-toggle='modal' data-target='#EditContactModal')
+                                  i.fa.fa-pencil
+                                a.danger.delete.mr-1
+                                  i.fa.fa-trash-o
+                                span.dropdown
+                                  a#btnSearchDrop31.dropdown-toggle.dropdown-menu-right(data-toggle='dropdown' aria-haspopup='true' aria-expanded='true')
+                                    i.fa.fa-ellipsis-v
+                                  span.dropdown-menu.mt-1.dropdown-menu-right(aria-labelledby='btnSearchDrop31')
+                                    a.dropdown-item.edit(data-toggle='modal' data-target='#EditContactModal')
+                                      i.feather.icon-edit-2
+                                      | 																Edit
+                                    a.dropdown-item.delete(href='#')
+                                      i.feather.icon-trash-2
+                                      |  Delete
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.primary
+                                      |  Projects
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.info
+                                      |  Team
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.warning
+                                      |  Clients
+                                    a.dropdown-item(href='#')
+                                      i.feather.icon-plus-circle.success
+                                      |  Friends
+                          tfoot
+                            tr
+                              th
+                              th Name
+                              th Email
+                              th Phone
+                              th Favorite
+                              th Actions
+      // END: Content
+      // BEGIN: Footer
+      footer.footer.footer-static.footer-light.navbar-border
+        p.clearfix.blue-grey.lighten-2.text-sm-center.mb-0.px-2
+          span.float-md-left.d-block.d-md-inline-block
+            a.text-bold-800.grey.darken-2 PHANTHITHUHANG
+          span.float-md-right.d-none.d-lg-block
+            | Đồ án thực tập 
+            i.feather.icon-heart.pink
+      // END: Footer
+      // BEGIN: Vendor JS
+      script(src='/js/vendors.min.js')
+      // BEGIN Vendor JS
+      // BEGIN: Page Vendor JS
+      script(src='/js/jquery.dataTables.min.js')
+      script(src='/js/jquery.raty.js')
+      script(src='/js/dataTables.bootstrap4.min.js')
+      script(src='/js/dataTables.responsive.min.js')
+      script(src='/js/dataTables.rowReorder.min.js')
+      script(src='/js/icheck.min.js')
+      // END: Page Vendor JS
+      // BEGIN: Theme JS
+      script(src='/js/app-menu.min.js')
+      script(src='/js/app.min.js')
+      // END: Theme JS
+      // BEGIN: Page JS
+      script(src='/js/app-contacts.min.js')
+      // END: Page JS
+      // END: Body

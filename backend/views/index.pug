@@ -1,0 +1,624 @@
+doctype html
+html.loading(lang='en' data-textdirection='ltr')
+  // BEGIN: Head
+  head
+    meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui')
+    meta(name='description' content='Stack admin is super flexible, powerful, clean & modern responsive bootstrap 4 admin template with unlimited possibilities.')
+    meta(name='keywords' content='admin template, stack admin template, dashboard template, flat admin template, responsive admin template, web app')
+    meta(name='author' content='PIXINVENT')
+    title Home
+    link(rel='apple-touch-icon' href='/images/apple-icon-120.png')
+    link(rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico')
+    link(href='https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i' rel='stylesheet')
+    // BEGIN: Vendor CSS
+    link(rel='stylesheet' type='text/css' href='/css/vendors.min.css')
+    // END: Vendor CSS
+    // BEGIN: Theme CSS
+    link(rel='stylesheet' type='text/css' href='/css/bootstrap.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/bootstrap-extended.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/colors.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/components.min.css')
+    // END: Theme CSS
+    // BEGIN: Page CSS
+    link(rel='stylesheet' type='text/css' href='/css/vertical-menu-modern.css')
+    link(rel='stylesheet' type='text/css' href='/css/palette-gradient.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/fonts/style.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/card-statistics.min.css')
+    link(rel='stylesheet' type='text/css' href='/css/vertical-timeline.min.css')
+    // END: Page CSS
+    // BEGIN: Custom CSS
+    link(rel='stylesheet' type='text/css' href='/css/style.css')
+    // END: Custom CSS
+    // END: Head
+    // BEGIN: Body
+    body.vertical-layout.vertical-menu-modern.2-columns.menu-collapsed.fixed-navbar(data-open='click' data-menu='vertical-menu-modern' data-col='2-columns')
+      // BEGIN: Header
+      nav.header-navbar.navbar-expand-lg.navbar.navbar-with-menu.fixed-top.navbar-semi-dark
+        .navbar-wrapper
+          .navbar-header
+            ul.nav.navbar-nav.flex-row
+              li.nav-item.mobile-menu.d-lg-none.mr-auto
+                a.nav-link.nav-menu-main.menu-toggle.hidden-xs(href='#')
+                  i.feather.icon-menu.font-large-1
+              li.nav-item.mr-auto
+                a.navbar-brand(href='/index.html')
+                  img.brand-logo(alt='stack admin logo' src='/images/stack-logo-light.png')
+                  h2.brand-text JS
+              li.nav-item.d-none.d-lg-block.nav-toggle
+                a.nav-link.modern-nav-toggle.pr-0(data-toggle='collapse')
+                  i.toggle-icon.feather.icon-toggle-right.font-medium-3.white(data-ticon='feather.icon-toggle-right')
+              li.nav-item.d-lg-none
+                a.nav-link.open-navbar-container(data-toggle='collapse' data-target='#navbar-mobile')
+                  i.fa.fa-ellipsis-v
+          .navbar-container.content
+            #navbar-mobile.collapse.navbar-collapse
+              ul.nav.navbar-nav.mr-auto.float-left
+              ul.nav.navbar-nav.float-right
+                //
+                  <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-gb"></i><span class="selected-language"></span></a>
+                  <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a><a class="dropdown-item" href="#" data-language="fr"><i class="flag-icon flag-icon-fr"></i> French</a><a class="dropdown-item" href="#" data-language="pt"><i class="flag-icon flag-icon-pt"></i> Portuguese</a><a class="dropdown-item" href="#" data-language="de"><i class="flag-icon flag-icon-de"></i> German</a></div>
+                  </li>
+                li.dropdown.dropdown-notification.nav-item
+                  a.nav-link.nav-link-label(href='#' data-toggle='dropdown')
+                    i.ficon.feather.icon-bell
+                    span.badge.badge-pill.badge-danger.badge-up 5
+                  ul.dropdown-menu.dropdown-menu-media.dropdown-menu-right
+                    li.dropdown-menu-header
+                      h6.dropdown-header.m-0
+                        span.grey.darken-2 Notifications
+                        span.notification-tag.badge.badge-danger.float-right.m-0 5 New
+                    li.scrollable-container.media-list
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-plus-square.icon-bg-circle.bg-cyan
+                          .media-body
+                            h6.media-heading You have new order!
+                            p.notification-text.font-small-3.text-muted Lorem ipsum dolor sit amet, consectetuer elit.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') 30 minutes ago
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-download-cloud.icon-bg-circle.bg-red.bg-darken-1
+                          .media-body
+                            h6.media-heading.red.darken-1 99% Server load
+                            p.notification-text.font-small-3.text-muted Aliquam tincidunt mauris eu risus.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Five hour ago
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-alert-triangle.icon-bg-circle.bg-yellow.bg-darken-3
+                          .media-body
+                            h6.media-heading.yellow.darken-3 Warning notifixation
+                            p.notification-text.font-small-3.text-muted Vestibulum auctor dapibus neque.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Today
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-check-circle.icon-bg-circle.bg-cyan
+                          .media-body
+                            h6.media-heading Complete the task
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Last week
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left.align-self-center
+                            i.feather.icon-file.icon-bg-circle.bg-teal
+                          .media-body
+                            h6.media-heading Generate monthly report
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Last month
+                    li.dropdown-menu-footer
+                      a.dropdown-item.text-muted.text-center(href='javascript:void(0)') Read all notifications
+                li.dropdown.dropdown-notification.nav-item
+                  a.nav-link.nav-link-label(href='#' data-toggle='dropdown')
+                    i.ficon.feather.icon-mail
+                    span.badge.badge-pill.badge-warning.badge-up 3
+                  ul.dropdown-menu.dropdown-menu-media.dropdown-menu-right
+                    li.dropdown-menu-header
+                      h6.dropdown-header.m-0
+                        span.grey.darken-2 Messages
+                        span.notification-tag.badge.badge-warning.float-right.m-0 4 New
+                    li.scrollable-container.media-list
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            .avatar.avatar-online.avatar-sm.rounded-circle
+                              img(src='/images/avatar-s-1.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Margaret Govan
+                            p.notification-text.font-small-3.text-muted I like your portfolio, let's start.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Today
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            span.avatar.avatar-sm.avatar-busy.rounded-circle
+                              img(src='/images/avatar-s-2.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Bret Lezama
+                            p.notification-text.font-small-3.text-muted I have seen your work, there is
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Tuesday
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            .avatar.avatar-online.avatar-sm.rounded-circle
+                              img(src='/images/avatar-s-3.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Carie Berra
+                            p.notification-text.font-small-3.text-muted Can we have call in this week ?
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') Friday
+                      a(href='javascript:void(0)')
+                        .media
+                          .media-left
+                            span.avatar.avatar-sm.avatar-away.rounded-circle
+                              img(src='/images/avatar-s-6.png' alt='avatar')
+                              i
+                          .media-body
+                            h6.media-heading Eric Alsobrook
+                            p.notification-text.font-small-3.text-muted We have project party this saturday.
+                            small
+                              time.media-meta.text-muted(datetime='2015-06-11T18:29:20+08:00') last month
+                    li.dropdown-menu-footer
+                      a.dropdown-item.text-muted.text-center(href='chat.html') Read all messages
+                li.dropdown.dropdown-user.nav-item
+                  a.dropdown-toggle.nav-link.dropdown-user-link(href='#' data-toggle='dropdown')
+                    .avatar.avatar-online
+                      img(src='/images/avatar-s-1.png' alt='avatar')
+                      i
+                    span.user-name Ram Ram
+                  .dropdown-menu.dropdown-menu-right
+                    a.dropdown-item(href='account.html')
+                      i.feather.icon-user
+                      |  Edit Profile
+                    a.dropdown-item(href='todo.html')
+                      i.feather.icon-check-square
+                      |  Task
+                    a.dropdown-item(href='chat.html')
+                      i.feather.icon-message-square
+                      |  Chats
+                    .dropdown-divider
+                    a.dropdown-item(href='login.html')
+                      i.feather.icon-power
+                      |  Logout
+      // END: Header
+      // BEGIN: Main Menu
+      .main-menu.menu-fixed.menu-dark.menu-accordion.menu-shadow(data-scroll-to-active='true')
+        .main-menu-content
+          ul#main-menu-navigation.navigation.navigation-main(data-menu='menu-navigation')
+            li.navigation-header
+              span Tổng quan
+              i.feather.icon-minus(data-toggle='tooltip' data-placement='right' data-original-title='General')
+            li.nav-item
+              a(href='index.html')
+                i.feather.icon-layout
+                span.menu-title(data-i18n='Layouts') Bảng
+              //
+                <ul class="menu-content">
+                <li><a class="menu-item" href="#" data-i18n="Page Layouts">Page Layouts</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="layout-1-column.html" data-i18n="1 column">1 column</a>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Content Det Sidebar">Content Det Sidebar</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="layout-content-detached-left-sidebar.html" data-i18n="Detached left sidebar">Detached left sidebar</a>
+                </li>
+                </ul>
+                </li>
+                <li class="navigation-divider"></li>
+                <li><a class="menu-item" href="layout-fixed-navbar.html" data-i18n="Fixed navbar">Fixed navbar</a>
+                </li>
+                <li class="navigation-divider"></li>
+                <li><a class="menu-item" href="layout-fixed.html" data-i18n="Fixed layout">Fixed layout</a>
+                </li>
+                <li class="navigation-divider"></li>
+                <li><a class="menu-item" href="layout-light.html" data-i18n="Light layout">Light layout</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Navbars">Navbars</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="navbar-light.html" data-i18n="Navbar Light">Navbar Light</a>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Hide on Scroll">Hide on Scroll</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="navbar-hide-on-scroll-top.html" data-i18n="Hide on Scroll Top">Hide on Scroll Top</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="navbar-components.html" data-i18n="Navbar Components">Navbar Components</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Vertical Nav">Vertical Nav</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="#" data-i18n="Navigation Types">Navigation Types</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="../vertical-menu-template" data-i18n="Vertical Menu">Vertical Menu</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="vertical-nav-tags-pills.html" data-i18n="Tags &amp; Pills">Tags &amp; Pills</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Horizontal Nav">Horizontal Nav</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="#" data-i18n="Navigation Types">Navigation Types</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="Classic">Classic</a>
+                </li>
+                <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="Nav Dark">Nav Dark</a>
+                </li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Page Headers">Page Headers</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="headers-breadcrumbs-basic.html" data-i18n="Breadcrumbs basic">Breadcrumbs basic</a>
+                </li>
+                </ul>
+                </li>
+                <li><a class="menu-item" href="#" data-i18n="Footers">Footers</a>
+                <ul class="menu-content">
+                <li><a class="menu-item" href="footer-light.html" data-i18n="Footer Light">Footer Light</a>
+                </li>
+                </ul>
+                </li>
+                </ul>
+            li.navigation-header
+              span Các Nhóm
+              i.feather.icon-minus(data-toggle='tooltip' data-placement='right' data-original-title='Apps')
+            li.nav-item
+              a(href='')
+                i.feather.icon-users
+                span.menu-title(data-i18n='Contacts') Front-end
+              ul.menu-content
+                li
+                  a.menu-item(href='alltable.html' data-i18n='Page Layouts') Bảng
+                li
+                  a.menu-item(href='member.html' data-i18n='Page Layouts') Thành viên
+                li
+                  a.menu-item(href='todo.html' data-i18n='Page Layouts') Việc cần làm
+            li.nav-item
+              a(href='')
+                i.feather.icon-users
+                span.menu-title(data-i18n='Contacts') Intership
+              ul.menu-content
+                li
+                  a.menu-item(href='alltable.html' data-i18n='Page Layouts') Bảng
+                li
+                  a.menu-item(href='member.html' data-i18n='Page Layouts') Thành viên
+                li
+                  a.menu-item(href='todo.html' data-i18n='Page Layouts') Việc cần làm
+            li.nav-item
+              a(href='')
+                i.feather.icon-users
+                span.menu-title(data-i18n='Contacts') Web project
+              ul.menu-content
+                li
+                  a.menu-item(href='alltable.html' data-i18n='Page Layouts') Bảng
+                li
+                  a.menu-item(href='member.html' data-i18n='Page Layouts') Thành viên
+                li
+                  a.menu-item(href='todo.html' data-i18n='Page Layouts') Việc cần làm
+            //
+              <li class=" nav-item"><a href="chat.html"><i class="feather icon-message-square"></i><span class="menu-title" data-i18n="Chat Application">Chat Application</span></a>
+              </li>
+              <li class=" nav-item"><a href="todo.html"><i class="feather icon-check-square"></i><span class="menu-title" data-i18n="Todo Application">Todo Application</span></a>
+              </li>
+              <li class=" nav-item"><a href="table.html"><i class="feather icon-file-plus"></i><span class="menu-title" data-i18n="Kanban Application">Kanban Application</span></a>
+              </li>
+              <li class=" nav-item"><a href="member.html"><i class="feather icon-users"></i><span class="menu-title" data-i18n="Contacts">Thành viên</span></a>
+              </li>
+            li.navigation-header
+              span Các Trang
+              i.feather.icon-minus(data-toggle='tooltip' data-placement='right' data-original-title='Pages')
+            li.nav-item
+              a(href='calendar.html')
+                i.feather.icon-plus-square
+                span.menu-title(data-i18n='Calender') Calender
+      // END: Main Menu
+      // BEGIN: Content
+      .app-content.content
+        .content-overlay
+        .content-wrapper
+          .content-header.row
+          .content-body
+            // Grouped multiple cards for statistics starts here
+            .row.grouped-multiple-statistics-card
+              .card-body
+                //
+                  <div class="row">
+                  <div class="col-lg-6 col-xl-3 col-sm-6 col-12">
+                  <div class="d-flex align-items-start mb-sm-1 mb-xl-0 border-right-blue-grey border-right-lighten-5">
+                  <span class="card-icon primary d-flex justify-content-center mr-3">
+                  <i class="icon p-1 icon-bar-chart customize-icon font-large-2 p-1"></i>
+                  </span>
+                  <div class="stats-amount mr-3">
+                  <h3 class="heading-text text-bold-600">$95k</h3>
+                  <p class="sub-heading">Revenue</p>
+                  </div>
+                  <span class="inc-dec-percentage">
+                  <small class="success"><i class="fa fa-long-arrow-up"></i> 5.2%</small>
+                  </span>
+                  </div>
+                  </div>
+                  <div class="col-lg-6 col-xl-3 col-sm-6 col-12">
+                  <div class="d-flex align-items-start mb-sm-1 mb-xl-0 border-right-blue-grey border-right-lighten-5">
+                  <span class="card-icon danger d-flex justify-content-center mr-3">
+                  <i class="icon p-1 icon-pie-chart customize-icon font-large-2 p-1"></i>
+                  </span>
+                  <div class="stats-amount mr-3">
+                  <h3 class="heading-text text-bold-600">18.63%</h3>
+                  <p class="sub-heading">Growth Rate</p>
+                  </div>
+                  <span class="inc-dec-percentage">
+                  <small class="danger"><i class="fa fa-long-arrow-down"></i> 2.0%</small>
+                  </span>
+                  </div>
+                  </div>
+                  <div class="col-lg-6 col-xl-3 col-sm-6 col-12">
+                  <div class="d-flex align-items-start border-right-blue-grey border-right-lighten-5">
+                  <span class="card-icon success d-flex justify-content-center mr-3">
+                  <i class="icon p-1 icon-graph customize-icon font-large-2 p-1"></i>
+                  </span>
+                  <div class="stats-amount mr-3">
+                  <h3 class="heading-text text-bold-600">$27k</h3>
+                  <p class="sub-heading">Sales</p>
+                  </div>
+                  <span class="inc-dec-percentage">
+                  <small class="success"><i class="fa fa-long-arrow-up"></i> 10.0%</small>
+                  </span>
+                  </div>
+                  </div>
+                  <div class="col-lg-6 col-xl-3 col-sm-6 col-12">
+                  <div class="d-flex align-items-start">
+                  <span class="card-icon warning d-flex justify-content-center mr-3">
+                  <i class="icon p-1 icon-basket-loaded customize-icon font-large-2 p-1"></i>
+                  </span>
+                  <div class="stats-amount mr-3">
+                  <h3 class="heading-text text-bold-600">13700</h3>
+                  <p class="sub-heading">Orders</p>
+                  </div>
+                  <span class="inc-dec-percentage">
+                  <small class="danger"><i class="fa fa-long-arrow-down"></i> 13.6%</small>
+                  </span>
+                  </div>
+                  </div>
+                  <div class="col-lg-6 col-xl-3 col-sm-6 col-12">
+                  <div class="d-flex align-items-start">
+                  <span class="card-icon warning d-flex justify-content-center mr-3">
+                  <i class="icon p-1 icon-basket-loaded customize-icon font-large-2 p-1"></i>
+                  </span>
+                  <div class="stats-amount mr-3">
+                  <h3 class="heading-text text-bold-600">13700</h3>
+                  <p class="sub-heading">Orders</p>
+                  </div>
+                  <span class="inc-dec-percentage">
+                  <small class="danger"><i class="fa fa-long-arrow-down"></i> 13.6%</small>
+                  </span>
+                  </div>
+                  </div>
+                  </div>
+                .row.tamember(style='justify-content: center;')
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      i.feather.icon-users
+                      a  Front-end
+                    li.breadcrumb-item
+                      a(href='alltable.html')  Bảng
+                    li.breadcrumb-item.active
+                      a(href='member.html') Thành viên
+                .row
+                  .col-xl-3.col-sm-6.col-12
+                    .card
+                      .card-content
+                        .card-body
+                          .media.d-flex
+                            .media-body.text-left
+                              h3.danger
+                                a(href='table.html') Css+html
+                              a(href='table.html')
+                            a(href='table.html')
+                              .align-self-center
+                                i.icon-list.danger.font-large-2.float-right
+                          a(href='table.html')
+                        a(href='table.html')
+                      a(href='table.html')
+                    a(href='table.html')
+                  a(href='table.html')
+                  .col-xl-3.col-sm-6.col-12
+                    a(href='table.html')
+                    .card
+                      a(href='table.html')
+                      .card-content
+                        a(href='table.html')
+                        .card-body
+                          a(href='table.html')
+                          .media.d-flex
+                            a(href='table.html')
+                            .media-body.text-left
+                              a(href='table.html')
+                              h3.success
+                                a(href='table.html')
+                                a(href='table.html') Fashion web
+                            .align-self-center
+                              i.icon-list.success.font-large-2.float-right
+                  .col-xl-3.col-sm-6.col-12
+                    .card
+                      .card-content
+                        .card-body
+                          .media.d-flex
+                            .media-body.text-left
+                              h3.warning
+                                a Design
+                            .align-self-center
+                              i.icon-list.warning.font-large-2.float-right
+                  .col-xl-3.col-sm-6.col-12
+                    .card
+                      .card-content
+                        .card-body
+                          .media.d-flex
+                            .media-body.text-left
+                              h3.primary
+                                a File dox
+                            .align-self-center
+                              i.icon-list.primary.font-large-2.float-right
+                  .col-xl-3.col-sm-6.col-12
+                    .card
+                      .card-content
+                        .card-body
+                          .media.d-flex
+                            .media-body.text-left
+                              h3.primary
+                                a TK XD
+                            .align-self-center
+                              i.icon-list.primary.font-large-2.float-right
+                  // thêm bảng mới
+                  .col-xl-3.col-sm-6.col-12
+                    .card(style='height: 83.6px;')
+                      .card-content
+                        .card-body
+                          .media.d-flex(style='justify-content:center;')
+                            a(href='' data-toggle='modal' data-target='#inlineForm')
+                              | Thêm bảng mới
+                              i.feather.icon-plus
+            .row.grouped-multiple-statistics-card
+              .card-body
+                .row.tamember(style='justify-content: center;')
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      i.feather.icon-users
+                      a  Intership
+                    li.breadcrumb-item
+                      a(href='alltable.html')  Bảng
+                    li.breadcrumb-item.active
+                      a(href='member.html') Thành viên
+                .row
+                  .col-xl-3.col-sm-6.col-12
+                    .card
+                      .card-content
+                        .card-body
+                          .media.d-flex
+                            .media-body.text-left
+                              h3.danger
+                                a Css+html
+                              a
+                            a
+                              .align-self-center
+                                i.icon-list.danger.font-large-2.float-right
+                          a
+                        a
+                      a
+                    a
+                  a
+                  .col-xl-3.col-sm-6.col-12
+                    a
+                    .card
+                      a
+                      .card-content
+                        a
+                        .card-body
+                          a
+                          .media.d-flex
+                            a
+                            .media-body.text-left
+                              a
+                              h3.success
+                                a
+                                a Fashion web
+                            .align-self-center
+                              i.icon-list.success.font-large-2.float-right
+                  .col-xl-3.col-sm-6.col-12
+                    .card
+                      .card-content
+                        .card-body
+                          .media.d-flex
+                            .media-body.text-left
+                              h3.warning
+                                a Design
+                            .align-self-center
+                              i.icon-list.warning.font-large-2.float-right
+                  .col-xl-3.col-sm-6.col-12
+                    .card
+                      .card-content
+                        .card-body
+                          .media.d-flex
+                            .media-body.text-left
+                              h3.primary
+                                a File dox
+                            .align-self-center
+                              i.icon-list.primary.font-large-2.float-right
+                  .col-xl-3.col-sm-6.col-12
+                    .card
+                      .card-content
+                        .card-body
+                          .media.d-flex
+                            .media-body.text-left
+                              h3.primary
+                                a TK XD
+                            .align-self-center
+                              i.icon-list.primary.font-large-2.float-right
+                  // thêm bảng mới
+                  .col-xl-3.col-sm-6.col-12
+                    .card(style='height: 83.6px;')
+                      .card-content
+                        .card-body
+                          .media.d-flex(style='justify-content:center;')
+                            a(href='' data-toggle='modal' data-target='#inlineForm')
+                              | Thêm bảng mới
+                              i.feather.icon-plus
+            // Modal
+            section
+              #inlineForm.modal.fade.text-left(tabindex='-1' role='dialog' aria-labelledby='myModalLabel33' aria-hidden='true')
+                .modal-dialog(role='document')
+                  .modal-content
+                    .modal-header
+                      label#myModalLabel33.modal-title.text-text-bold-600 Thêm tiêu đề bảng 
+                      button.close(type='button' data-dismiss='modal' aria-label='Close')
+                        span(aria-hidden='true') ×
+                    form(action='#')
+                      .modal-body
+                        label Tiêu đề: 
+                        .form-group
+                          input.form-control(type='text' placeholder='...')
+                        .modal-footer
+                          input.btn.btn-outline-secondary.btn-lg(type='reset' data-dismiss='modal' value='Đóng')
+                          input.btn.btn-outline-primary.btn-lg(type='submit' value='Thêm bảng')
+      // END: Content
+      // BEGIN: Footer
+      footer.footer.footer-static.footer-light.navbar-border
+        p.clearfix.blue-grey.lighten-2.text-sm-center.mb-0.px-2
+          span.float-md-left.d-block.d-md-inline-block
+            a.text-bold-800.grey.darken-2 PHANTHITHUHANG
+          span.float-md-right.d-none.d-lg-block
+            | Đồ án thực tập 
+            i.feather.icon-heart.pink
+      // END: Footer
+      // BEGIN: Vendor JS
+      script(src='/js/vendors.min.js')
+      // BEGIN Vendor JS
+      // BEGIN: Page Vendor JS
+      script(src='/js/apexcharts.min.js')
+      // END: Page Vendor JS
+      // BEGIN: Theme JS
+      script(src='/js/app-menu.min.js')
+      script(src='/js/app.min.js')
+      // END: Theme JS
+      // BEGIN: Page JS
+      script(src='/js/card-statistics.min.js')
+      script(src='/js/components-modal.min.js')
+      // END: Page JS
+      // END: Body

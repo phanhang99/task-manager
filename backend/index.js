@@ -53,7 +53,7 @@ app.use(function (req, res, next) {
   next();
 });
 app.get("/", (req, res) =>
-  res.render("account", {
+  res.render("login", {
     name: "Phan Cong Tai",
   })
 );
