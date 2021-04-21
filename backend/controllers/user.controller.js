@@ -18,6 +18,7 @@ module.exports.updateInfo = async (req, res) => {
     for (const key of Object.keys(req.body)) {
       doc[key] = req.body[key];
     }
+    if(req.file) doc.avatar = req.file.filename;
     doc.save(() => res.redirect('/user/getProfile'));
   });
 }
