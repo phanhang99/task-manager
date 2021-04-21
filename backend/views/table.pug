@@ -426,11 +426,12 @@ html.loading(lang='en' data-textdirection='ltr')
                   script(src='/js/app.min.js')
                   // END: Theme JS
                   // BEGIN: Page JS
-                  script(src='/js/app-kanban.js')
                   // END: Page JS
                   // Code injected by live-server
                   script(type='text/javascript').
                     // <![CDATA[  <-- For SVG support
+                    var card = !{JSON.stringify(card)}
+                    var id_category = '#{id_category}';
                     if ('WebSocket' in window) {
                     (function () {
                     function refreshCSS() {
@@ -464,5 +465,6 @@ html.loading(lang='en' data-textdirection='ltr')
                     else {
                     console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
                     }
+                  script(src='/js/app-kanban.js')
                     // ]]>
                     // END: Body

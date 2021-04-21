@@ -1,8 +1,8 @@
-var mongoose = require('mongoose')
-
+var mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 var userSchema = new mongoose.Schema({
-  name_cate: String,
-  id_group_card: [{ type: Schema.Types.ObjectId, ref: 'GroupCard' }],
+  name_category: String,
+  id_team: { type: Schema.Types.ObjectId, ref: 'Team' },
 })
 
 var Category = mongoose.model('Category', userSchema, 'categories')

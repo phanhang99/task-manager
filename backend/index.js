@@ -12,9 +12,14 @@ mongoose.connect(process.env.MONGO_URL, {
 
 const userRoutes = require('./routes/user.route')
 const authRoutes = require('./routes/auth.route')
+const categoryRoutes = require('./routes/category.route')
+const teamRoutes = require('./routes/team.route')
+const cardRoutes = require('./routes/card.route')
 
 const authUserMiddleware = require("./middlewares/auth-user.middleware");
-const authAdminMiddleware = require("./middlewares/auth-admin.middleware")
+const authAdminMiddleware = require("./middlewares/auth-admin.middleware");
+const getTeamsMiddleware = require("./middlewares/get-teams.middleware");
+const getCategoriesMiddleware = require("./middlewares/get-categories.middleware");
 
 const port = 2000;
 const app = express();
@@ -50,8 +55,13 @@ app.use(function (req, res, next) {
   // Pass to next layer of middleware
   next();
 });
-app.get("/", authUserMiddleware.requireAuth, (req, res) =>{
-  res.render("index",res.locals.user);
+app.get("/", authUserMiddleware.requireAuth, getTeamsMiddleware.getAll, getCategoriesMiddleware.getAll, (req, res) =>{
+  let teams = res.locals.teams;
+  let cates = res.locals.categories;
+  for(let i=0 ; i<teams.length; i++){
+    teams[i].categories = cates.filter(el => teams[i].id == el.id_team.id)
+  }
+  res.render("index",{...res.locals.user,teams: teams});
 });
 
 app.get("/admin",authUserMiddleware.requireAuth,authAdminMiddleware.requireAuthAdmin , (req, res) => {
@@ -59,6 +69,10 @@ app.get("/admin",authUserMiddleware.requireAuth,authAdminMiddleware.requireAuthA
 })
 
 app.use('/auth', authRoutes);
+
+app.use('/category', categoryRoutes);
+app.use('/team', teamRoutes);
+app.use('/card', cardRoutes);
 
 app.use("/user", authUserMiddleware.requireAuth, userRoutes);
 

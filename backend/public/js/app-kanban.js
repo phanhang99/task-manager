@@ -11,125 +11,18 @@ $(document).ready(function () {
   var kanban_curr_el, kanban_curr_item_id, kanban_item_title, kanban_data, kanban_item, kanban_users;
 
   // Kanban Board and Item Data passed by json
-  var kanban_board_data = [{
-      id: "kanban-board-1",
-      title: "Marketing",
+  var kanban_board_data = card.map((c, i) => {
+    return {
+      id: c.id,
+      title: c.name_card,
       item: [{
-          id: "11",
-          title: "Facebook Campaign 😎",
-          border: "success",
-          dueDate: "Feb 6",
-          comment: 1,
-          attachment: 3,
-          users: [
-            "/images/avatar-s-11.png",
-            "/images/avatar-s-1.png"
-          ]
-        },
-        
-        {
-          id: "13",
-          title: "Social Media Graphics",
-          border: "warning",
-          dueDate: "Jan 3",
-          comment: 23,
-          attachment: 4,
-          users: [
-            "/images/avatar-s-1.png",
-            "/images/avatar-s-18.png"
-          ]
-        },
-        {
-          id: "14",
-          title: "Book newspaper ads online in popular newspapers.",
-          border: "danger",
-          comment: 56,
-          attachment: 2,
-          users: [
-            "/images/avatar-s-26.png",
-            "/images/avatar-s-16.png"
-          ]
-        },
-        {
-          id: "15",
-          title: "Twitter Marketing",
-          border: "secondary"
-        }
-      ]
-    },
-    {
-      id: "kanban-board-2",
-      title: "UI Designing",
-      item: [{
-          id: "21",
+          id: i+1,
           title: "Flat UI Kit Design",
           border: "secondary"
         },
-        {
-          id: "22",
-          title: "Drag people onto a card to indicate that.",
-          border: "info",
-          dueDate: "Jan 1",
-          comment: 8,
-          users: [
-            "/images/avatar-s-24.png",
-            "/images/avatar-s-14.png"
-          ]
-        },
-        {
-          id: "23",
-          title: "Application Design",
-          border: "warning"
-        },
-        {
-          id: "24",
-          title: "BBQ Logo Design 😱",
-          border: "primary",
-          dueDate: "Jan 6",
-          comment: 10,
-          attachment: 6,
-          badgeContent: "AK",
-          badgeColor: "danger"
-        }
-      ]
-    },
-    {
-      id: "kanban-board-3",
-      title: "Developing",
-      item: [{
-          id: "31",
-          title: "Database Management System (DBMS) is a collection of programs",
-          border: "warning",
-          dueDate: "Mar 1",
-          comment: 10,
-          users: [
-            "/images/avatar-s-20.png",
-            "/images/avatar-s-22.png",
-            "/images/avatar-s-13.png"
-          ]
-        },
-        {
-          id: "32",
-          title: "Admin Dashboard 🙂",
-          border: "success",
-          dueDate: "Mar 6",
-          comment: 7,
-          badgeContent: "AD",
-          badgeColor: "primary"
-        },
-        {
-          id: "33",
-          title: "Fix bootstrap progress bar with & issue",
-          border: "primary",
-          dueDate: "Mar 9",
-          users: [
-            "/images/avatar-s-1.png",
-            "/images/avatar-s-2.png"
-          ]
-        }
       ]
     }
-  ];
+  })
 
   // Kanban Board
   var KanbanExample = new jKanban({
@@ -298,28 +191,14 @@ $(document).ready(function () {
   var addBoardDefault = document.getElementById("add-kanban");
   var i = 1;
   addBoardDefault.addEventListener("click", function () {
-    KanbanExample.addBoards([{
-      id: "kanban-" + i, // generate random id for each new kanban
-      title: "Default Title"
-    }]);
-    var kanbanNewBoard = KanbanExample.findBoard("kanban-" + i)
-
-    if (kanbanNewBoard) {
-      $(".kanban-title-board").on("mouseenter", function () {
-        $(this).attr("contenteditable", "true");
-        $(this).addClass("line-ellipsis");
-      });
-      kanbanNewBoardData =
-        '<div class="dropdown">' +
-        '<div class="dropdown-toggle cursor-pointer" role="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="feather icon-more-vertical"></i></div>' +
-        '<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton"> ' +
-        '<a class="dropdown-item kanban-delete" id="kanban-delete" href="#"><i class="feather icon-trash-2 mr-50"></i>Delete</a>' +
-        "</div>" + "</div>";
-      var kanbanNewDropdown = $(kanbanNewBoard).find("header");
-      $(kanbanNewDropdown).append(kanbanNewBoardData);
-    }
+    $.ajax({
+      url: "/card/create",
+      type: 'POST',
+      data: {name_card: 'Default Title', id_category}
+    }).done(function() {
+      $( this ).addClass( "done" );
+    });
     i++;
-
   });
 
   // Delete kanban board
