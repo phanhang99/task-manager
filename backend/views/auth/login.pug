@@ -47,7 +47,7 @@ html.loading(lang='en' data-textdirection='ltr')
                     .card-header.border-0
                       .card-title.text-center
                         .p-1
-                          img(src='' alt='branding logo')
+                          img(src='/images/favicon.ico' alt='branding logo')
                       h6.card-subtitle.line-on-side.text-muted.text-center.font-small-3.pt-2
                         span
                           | Easily
@@ -65,20 +65,13 @@ html.loading(lang='en' data-textdirection='ltr')
                           | OR Using
                           | Account Details
                       .card-body.pt-0
-                        form.form-horizontal(action='index.html')
+                        form.form-horizontal(action='/auth/login' method='post')
                           fieldset.form-group.floating-label-form-group
                             label(for='user-name') Your Email
-                            input#email.form-control(type='text' placeholder='Your Email')
+                            input#email.form-control(name='username' type='text' placeholder='Your Email')
                           fieldset.form-group.floating-label-form-group.mb-1
                             label(for='user-password') Enter Password
-                            input#user-password.form-control(type='password' placeholder='Enter Password')
-                          .form-group.row
-                            .col-sm-6.col-12.text-center.text-sm-left
-                              fieldset
-                                input#remember-me.chk-remember(type='checkbox')
-                                label(for='remember-me')  Remember Me
-                            .col-sm-6.col-12.float-sm-left.text-center.text-sm-right
-                              a.card-link(href='recover-password.html') Forgot Password?
+                            input#user-password.form-control(name='password' type='password' placeholder='Enter Password')
                           button.btn.btn-outline-primary.btn-block(type='submit')
                             i.feather.icon-unlock
                             |  Login
@@ -87,7 +80,7 @@ html.loading(lang='en' data-textdirection='ltr')
                           | New to
                           | Stack ?
                       .card-body
-                        a.btn.btn-outline-danger.btn-block(href='register.html')
+                        a.btn.btn-outline-danger.btn-block(href='auth/register')
                           i.feather.icon-user
                           |  Register
       // END: Content

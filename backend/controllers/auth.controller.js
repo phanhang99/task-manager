@@ -18,16 +18,16 @@ module.exports.postLogin = async (req,res) => {
     return;
   }
   res.cookie('userId',user.id, { signed: true, expires: new Date(Date.now() + 900000000)})
-  res.status(200).send({username : user.username, email: user.email, firstname: user.firstname, lastname: user.lastname})
+  res.redirect('/');
 }
 
 module.exports.logout = async (req, res) => {
   res.clearCookie('userId');
-  res.status(200).send('Successful log-out')
+  res.redirect('/');
 }
 
 module.exports.create = (req, res) => {
-  res.render('users/create')
+  res.render('auth/register')
 }
 
 module.exports.postCreate = async (req, res) => {
@@ -37,5 +37,5 @@ module.exports.postCreate = async (req, res) => {
   var user = await User.create(req.body).catch(err => {
     res.status(500).send('Failed with internal server error')
   })
-  res.status(200).send({username : user.username})
+  res.redirect('/')
 }

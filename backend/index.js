@@ -12,8 +12,6 @@ mongoose.connect(process.env.MONGO_URL, {
 
 const userRoutes = require('./routes/user.route')
 const authRoutes = require('./routes/auth.route')
-const lessonRoutes = require('./routes/lesson.route')
-const scoreRoutes = require('./routes/score.route')
 
 const authUserMiddleware = require("./middlewares/auth-user.middleware");
 const authAdminMiddleware = require("./middlewares/auth-admin.middleware")
@@ -52,22 +50,16 @@ app.use(function (req, res, next) {
   // Pass to next layer of middleware
   next();
 });
-app.get("/", (req, res) =>
-  res.render("login", {
-    name: "Phan Cong Tai",
-  })
-);
+app.get("/", authUserMiddleware.requireAuth, (req, res) =>{
+  res.render("index",res.locals.user);
+});
 
 app.get("/admin",authUserMiddleware.requireAuth,authAdminMiddleware.requireAuthAdmin , (req, res) => {
   res.status(200).send("Access Allowed")
 })
 
-app.use('/scores', scoreRoutes);
-
 app.use('/auth', authRoutes);
 
-app.use("/users", authUserMiddleware.requireAuth, userRoutes);
-
-app.use("/lessons", lessonRoutes);
+app.use("/user", authUserMiddleware.requireAuth, userRoutes);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));

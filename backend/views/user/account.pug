@@ -130,7 +130,7 @@ body.vertical-layout.vertical-menu-modern.2-columns.fixed-navbar
                     .media
                       .media-left
                         .avatar.avatar-online.avatar-sm.rounded-circle
-                          img(src='/images/avatar-s-1.png' alt='avatar')
+                          img(src=`/uploads/${avatar}` alt='avatar')
                           i
                       .media-body
                         h6.media-heading Margaret Govan
@@ -152,7 +152,7 @@ body.vertical-layout.vertical-menu-modern.2-columns.fixed-navbar
                     .media
                       .media-left
                         .avatar.avatar-online.avatar-sm.rounded-circle
-                          img(src='/images/avatar-s-3.png' alt='avatar')
+                          img(src=`/uploads/${avatar}` alt='avatar')
                           i
                       .media-body
                         h6.media-heading Carie Berra
@@ -175,11 +175,11 @@ body.vertical-layout.vertical-menu-modern.2-columns.fixed-navbar
             li.dropdown.dropdown-user.nav-item
               a.dropdown-toggle.nav-link.dropdown-user-link(href='#' data-toggle='dropdown')
                 .avatar.avatar-online
-                  img(src='/images/avatar-s-1.png' alt='avatar')
+                  img(src=`/uploads/${avatar}` alt='avatar')
                   i
                 span.user-name Ram Ram
               .dropdown-menu.dropdown-menu-right
-                a.dropdown-item(href='account.html')
+                a.dropdown-item(href='/user/getProfile')
                   i.feather.icon-user
                   |  Edit Profile
                 a.dropdown-item(href='todo.html')
@@ -189,7 +189,7 @@ body.vertical-layout.vertical-menu-modern.2-columns.fixed-navbar
                   i.feather.icon-message-square
                   |  Chats
                 .dropdown-divider
-                a.dropdown-item(href='login.html')
+                a.dropdown-item(href='/auth/logout')
                   i.feather.icon-power
                   |  Logout
   // END: Header
@@ -360,9 +360,9 @@ body.vertical-layout.vertical-menu-modern.2-columns.fixed-navbar
             .breadcrumb-wrapper.col-12
               ol.breadcrumb
                 li.breadcrumb-item
-                  a(href='index.html') Home
+                  a(href='/') Home
                 li.breadcrumb-item
-                  a(href='#') Users
+                  a(href='/user/getProfile') Users
                 li.breadcrumb-item.active
                   | Account setting
         //
@@ -397,109 +397,91 @@ body.vertical-layout.vertical-menu-modern.2-columns.fixed-navbar
                   a#account-pill-social.nav-link.d-flex(data-toggle='pill' href='#account-vertical-social' aria-expanded='false')
                     i.feather.icon-camera
                     |                                   Social links
-                li.nav-item
-                  a#account-pill-connections.nav-link.d-flex(data-toggle='pill' href='#account-vertical-connections' aria-expanded='false')
-                    i.feather.icon-feather
-                    |                                   Connections
-                li.nav-item
-                  a#account-pill-notifications.nav-link.d-flex(data-toggle='pill' href='#account-vertical-notifications' aria-expanded='false')
-                    i.feather.icon-message-circle
-                    |                                   Notifications
             // right content section
             .col-md-9
               .card
                 .card-content
                   .card-body
                     .tab-content
-                      #account-vertical-general.tab-pane.active(role='tabpanel' aria-labelledby='account-pill-general' aria-expanded='true')
+                      form#account-vertical-general.tab-pane.active(action='/user/updateInfo' method='post' enctype='multipart/form-data' role='tabpanel' aria-labelledby='account-pill-general' aria-expanded='true')
                         .media
                           a(href='javascript: void(0);')
-                            img.rounded.mr-75(src='/images/avatar-s-18.png' alt='profile image' height='64' width='64')
+                            img.rounded.mr-75(src=`/uploads/${avatar}` alt='profile image' height='64' width='64')
                           .media-body.mt-75
                             .col-12.px-0.d-flex.flex-sm-row.flex-column.justify-content-start
                               label.btn.btn-sm.btn-primary.ml-50.mb-50.mb-sm-0.cursor-pointer(for='account-upload') Upload new photo
-                              input#account-upload(type='file' hidden='')
-                              button.btn.btn-sm.btn-secondary.ml-50 Reset
+                              input#account-upload(name='avatar' type='file' hidden)
                             p.text-muted.ml-75.mt-50
-                              small
+                              small#file-chosen
                                 | Allowed JPG, GIF or PNG. Max
                                 | size of
                                 | 800kB
                         hr
-                        form(novalidate='')
+                        div
                           .row
                             .col-12
                               .form-group
                                 .controls
                                   label(for='account-username') Username
-                                  input#account-username.form-control(type='text' placeholder='Username' value='hermione007' required='' data-validation-required-message='This username field is required')
+                                  input#account-username.form-control(name='username' type='text' placeholder='Username' value=username required='' data-validation-required-message='This username field is required')
                             .col-12
                               .form-group
                                 .controls
                                   label(for='account-name') Name
-                                  input#account-name.form-control(type='text' placeholder='Name' value='Hermione Granger' required='' data-validation-required-message='This name field is required')
+                                  input#account-name.form-control(name='name' type='text' placeholder='Name' value=name required='' data-validation-required-message='This name field is required')
                             .col-12
                               .form-group
                                 .controls
                                   label(for='account-e-mail') E-mail
-                                  input#account-e-mail.form-control(type='email' placeholder='Email' value='granger007@hogward.com' required='' data-validation-required-message='This email field is required')
-                            .col-12
-                              .alert.alert-warning.alert-dismissible.mb-2(role='alert')
-                                button.close(type='button' data-dismiss='alert' aria-label='Close')
-                                  span(aria-hidden='true') &times;
-                                p.mb-0
-                                  | Your email is not confirmed. Please check your inbox.
-                                a(href='javascript: void(0);') Resend confirmation
+                                  input#account-e-mail.form-control(name='email' type='email' placeholder='Email' value=email required='' data-validation-required-message='This email field is required')
                             .col-12
                               .form-group
                                 label(for='account-company') Company
-                                input#account-company.form-control(type='text' placeholder='Company name')
+                                input#account-company.form-control(value=company name='company' type='text' placeholder='Company name')
                             .col-12.d-flex.flex-sm-row.flex-column.justify-content-end
                               button.btn.btn-primary.mr-sm-1.mb-1.mb-sm-0(type='submit')
                                 | Save
                                 | changes
-                              button.btn.btn-light(type='reset') Cancel
-                      #account-vertical-password.tab-pane.fade(role='tabpanel' aria-labelledby='account-pill-password' aria-expanded='false')
-                        form(novalidate='')
+                      form#account-vertical-password.tab-pane.fade(action='/user/updatePassword' method='post' role='tabpanel' aria-labelledby='account-pill-password' aria-expanded='false')
+                        div
                           .row
                             .col-12
                               .form-group
                                 .controls
                                   label(for='account-old-password') Old Password
-                                  input#account-old-password.form-control(type='password' required='' placeholder='Old Password' data-validation-required-message='This old password field is required')
+                                  input#account-old-password.form-control(type='password' name='oldpassword' required placeholder='Old Password' data-validation-required-message='This old password field is required')
                             .col-12
                               .form-group
                                 .controls
                                   label(for='account-new-password') New Password
-                                  input#account-new-password.form-control(type='password' name='password' placeholder='New Password' required='' data-validation-required-message='The password field is required' minlength='6')
+                                  input#account-new-password.form-control(type='password' name='newpassword' placeholder='New Password' required='' data-validation-required-message='The password field is required' minlength='6')
                             .col-12
                               .form-group
                                 .controls
                                   label(for='account-retype-new-password')
                                     | Retype New
                                     | Password
-                                  input#account-retype-new-password.form-control(type='password' name='con-password' required='' data-validation-match-match='password' placeholder='New Password' data-validation-required-message='The Confirm password field is required' minlength='6')
+                                  input#account-retype-new-password.form-control(type='password' name='conpassword' required='' data-validation-match-match='password' placeholder='New Password' data-validation-required-message='The Confirm password field is required' minlength='6')
                             .col-12.d-flex.flex-sm-row.flex-column.justify-content-end
                               button.btn.btn-primary.mr-sm-1.mb-1.mb-sm-0(type='submit')
                                 | Save
                                 | changes
-                              button.btn.btn-light(type='reset') Cancel
-                      #account-vertical-info.tab-pane.fade(role='tabpanel' aria-labelledby='account-pill-info' aria-expanded='false')
-                        form(novalidate='')
+                      form#account-vertical-info.tab-pane.fade(action='/user/updateInfo' method='post' role='tabpanel' aria-labelledby='account-pill-info' aria-expanded='false')
+                        div
                           .row
                             .col-12
                               .form-group
                                 label(for='accountTextarea') Bio
-                                textarea#accountTextarea.form-control(rows='3' placeholder='Your Bio data here...')
+                                textarea#accountTextarea.form-control(name='bio' value=bio rows='3' placeholder='Your Bio data here...') #{bio}
                             .col-12
                               .form-group
                                 .controls
                                   label(for='account-birth-date') Birth date
-                                  input#account-birth-date.form-control.birthdate-picker(type='text' required='' placeholder='Birth date' data-validation-required-message='This birthdate field is required')
+                                  input#account-birth-date.form-control.birthdate-picker(name='birthdate' value=birthdate type='text' required='' placeholder='Birth date' data-validation-required-message='This birthdate field is required')
                             .col-12
                               .form-group
                                 label(for='accountSelect') Country
-                                select#accountSelect.form-control
+                                select#accountSelect.form-control(name='country')
                                   option USA
                                   option India
                                   option Canada
@@ -507,113 +489,49 @@ body.vertical-layout.vertical-menu-modern.2-columns.fixed-navbar
                               .form-group
                                 .controls
                                   label(for='account-phone') Phone
-                                  input#account-phone.form-control(type='text' required='' placeholder='Phone number' value='(+656) 254 2568' data-validation-required-message='This phone number field is required')
+                                  input#account-phone.form-control(name='phone' value=phone type='text' required='' placeholder='Phone number' data-validation-required-message='This phone number field is required')
                             .col-12.d-flex.flex-sm-row.flex-column.justify-content-end
                               button.btn.btn-primary.mr-sm-1.mb-1.mb-sm-0(type='submit')
                                 | Save
                                 | changes
-                              button.btn.btn-light(type='reset') Cancel
-                      #account-vertical-social.tab-pane.fade(role='tabpanel' aria-labelledby='account-pill-social' aria-expanded='false')
-                        form
+                      form#account-vertical-social.tab-pane.fade(action='/user/updateInfo' method='post' role='tabpanel' aria-labelledby='account-pill-social' aria-expanded='false')
+                        div
                           .row
                             .col-12
                               .form-group
                                 label(for='account-twitter') Twitter
-                                input#account-twitter.form-control(type='text' placeholder='Add link' value='https://www.twitter.com')
+                                input#account-twitter.form-control(name='twitter' value=twitter type='text' placeholder='Add link')
                             .col-12
                               .form-group
                                 label(for='account-facebook') Facebook
-                                input#account-facebook.form-control(type='text' placeholder='Add link')
+                                input#account-facebook.form-control(name='facebook' value=facebook type='text' placeholder='Add link')
                             .col-12
                               .form-group
                                 label(for='account-google') Google+
-                                input#account-google.form-control(type='text' placeholder='Add link')
+                                input#account-google.form-control(name='google' value=google type='text' placeholder='Add link')
                             .col-12
                               .form-group
                                 label(for='account-linkedin') LinkedIn
-                                input#account-linkedin.form-control(type='text' placeholder='Add link' value='https://www.linkedin.com')
+                                input#account-linkedin.form-control(name='linkedin' value=linkedin type='text' placeholder='Add link')
                             .col-12
                               .form-group
                                 label(for='account-instagram') Instagram
-                                input#account-instagram.form-control(type='text' placeholder='Add link')
+                                input#account-instagram.form-control(name='instagram' value=instagram type='text' placeholder='Add link')
                             .col-12
                               .form-group
                                 label(for='account-quora') Quora
-                                input#account-quora.form-control(type='text' placeholder='Add link')
+                                input#account-quora.form-control(name='quora' value=quora type='text' placeholder='Add link')
                             .col-12.d-flex.flex-sm-row.flex-column.justify-content-end
                               button.btn.btn-primary.mr-sm-1.mb-1.mb-sm-0(type='submit')
                                 | Save
                                 | changes
-                              button.btn.btn-light(type='reset') Cancel
-                      #account-vertical-connections.tab-pane.fade(role='tabpanel' aria-labelledby='account-pill-connections' aria-expanded='false')
-                        .row
-                          .col-12.mb-3
-                            a.btn.btn-info(href='javascript: void(0);')
-                              | Connect to
-                              strong Twitter
-                          .col-12.mb-3
-                            button.btn.btn-sm.btn-secondary.float-right edit
-                            h6 You are connected to facebook.
-                            span Johndoe@gmail.com
-                          .col-12.mb-3
-                            a.btn.btn-danger(href='javascript: void(0);')
-                              | Connect to
-                              strong Google
-                          .col-12.mb-2
-                            button.btn.btn-sm.btn-secondary.float-right edit
-                            h6 You are connected to Instagram.
-                            span Johndoe@gmail.com
-                          .col-12.d-flex.flex-sm-row.flex-column.justify-content-end
-                            button.btn.btn-primary.mr-sm-1.mb-1.mb-sm-0(type='submit')
-                              | Save
-                              | changes
-                            button.btn.btn-light(type='reset') Cancel
-                      #account-vertical-notifications.tab-pane.fade(role='tabpanel' aria-labelledby='account-pill-notifications' aria-expanded='false')
-                        .row
-                          h6.ml-1.mb-2 Activity
-                          .col-12
-                            .form-group
-                              input#accountSwitch1.switchery(type='checkbox' data-size='sm' checked='')
-                              label.ml-50(for='accountSwitch1')
-                                | Email me when someone
-                                | comments
-                          .col-12
-                            .form-group
-                              input#accountSwitch2.switchery(type='checkbox' data-size='sm' checked='')
-                              label.ml-50(for='accountSwitch2')
-                                | Email me when someone answers
-                                | on
-                          .col-12
-                            .form-group
-                              input#accountSwitch3.switchery(type='checkbox' data-size='sm')
-                              label.ml-50(for='accountSwitch3')
-                                | Email me hen someone follows
-                                | me
-                          h6.ml-1.my-2 Application
-                          .col-12
-                            .form-group
-                              input#accountSwitch4.switchery(type='checkbox' data-size='sm' checked='')
-                              label.ml-50(for='accountSwitch4') News and announcements
-                          .col-12
-                            .form-group
-                              input#accountSwitch5.switchery(type='checkbox' data-size='sm')
-                              label.ml-50(for='accountSwitch5') Weekly product updates
-                          .col-12
-                            .form-group
-                              input#accountSwitch6.switchery(type='checkbox' data-size='sm' checked='')
-                              label.ml-50(for='accountSwitch6') Weekly blog digest
-                          .col-12.d-flex.flex-sm-row.flex-column.justify-content-end
-                            button.btn.btn-primary.mr-sm-1.mb-1.mb-sm-0(type='submit')
-                              | Save
-                              | changes
-                            button.btn.btn-light(type='reset') Cancel
         // account setting page end
   // END: Content
   // BEGIN: Footer
   footer.footer.footer-static.footer-light.navbar-border
     p.clearfix.blue-grey.lighten-2.text-sm-center.mb-0.px-2
       span.float-md-left.d-block.d-md-inline-block
-        a.text-bold-800.grey.darken-2 PHANTHITHUHANG
+        a.text-bold-800.grey.darken-2 #{name}
       span.float-md-right.d-none.d-lg-block
         | &Dstrok;&#x1ED3; &aacute;n th&#x1EF1;c t&#x1EAD;p 
         i.feather.icon-heart.pink
@@ -635,5 +553,6 @@ body.vertical-layout.vertical-menu-modern.2-columns.fixed-navbar
   // BEGIN: Page JS
   script(src='/js/account-setting.min.js')
   script(src='/js/components-modal.min.js')
+  script(src='/js/upload-avatar.js')
   // END: Page JS
   // END: Body
